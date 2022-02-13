@@ -28,3 +28,34 @@
 它就會印出hello, world
 
 ---
+## 使用node在terminal進行加減乘除
+可以在terminal輸入
+> node
+
+即可進入該環境，之後可以輸入各個數值進行簡單運算，
+然後想要跳出只要按下 ^c 或是輸入
+> .exit
+
+即可跳出該node。
+
+---
+
+## 利用console.log內部的框框計算
+在javascript這個檔案裡輸入
+> console.log(1+1+1)
+
+然後存檔，之後在terminal輸入
+> node <該javascript名稱>
+
+即可在terminal看到計算結果
+
+---
+
+=============
+目前看到這：
+
+https://lidemy.com/courses/389485/lectures/5942922
+
+https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
+
+https://github.com/Lidemy/mentor-program-5th-Wangpoching
