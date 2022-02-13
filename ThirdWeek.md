@@ -4,3 +4,7 @@
 > node -v
 
 可以查看當前版本。
+
+---
+## Mac使用Google Chrome查看錯誤訊息
+使用 option + command + i 即可查看錯誤訊息。
