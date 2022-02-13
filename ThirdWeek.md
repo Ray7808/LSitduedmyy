@@ -18,3 +18,13 @@
 然後等它跳出補充訊息，再輸入enter即可直接建構最簡單的html範例。
 
 ---
+## 使用node輸出console.log訊息
+在將html跟js建構好之後，可以在javascript檔案裡面輸入
+> console.log('hello, world')
+
+之後在terminal裡輸入
+>node <該javascript檔案>
+
+它就會印出hello, world
+
+---
