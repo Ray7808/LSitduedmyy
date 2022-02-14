@@ -460,3 +460,5 @@ https://www.mdeditor.tw
 vscode 開啟 terminal：control + ~(左上角)
 
 vscode 開啟 markdown(md 檔)：command + shift + v
+
+查看隱藏資料夾快捷鍵：Command + shift + .
