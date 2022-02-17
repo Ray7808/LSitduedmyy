@@ -74,7 +74,8 @@
 目前看到這：
 
 還沒看：
-https://lidemy.com/courses/387030/lectures/5901683
+
+https://lidemy.com/courses/387030/lectures/5901723
 
 https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
