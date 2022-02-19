@@ -1,1 +1,4 @@
-console.log(1 + 3 * 5)
+var box = 123
+var hello = 60
+
+console.log(box & 1)
