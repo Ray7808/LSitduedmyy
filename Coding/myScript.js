@@ -1,4 +1,1 @@
-var box = 123
-var hello = 60
-
-console.log(box & 1)
+console.log(12 === "12")
