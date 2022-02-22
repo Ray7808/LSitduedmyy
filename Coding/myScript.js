@@ -1,11 +1,13 @@
-var age = 70
+var month = 1
 
-if (age >= 65) {
-    console.log("Old man")
-}
-else if (age <= 65 && age >= 20) {
-    console.log("young man")
-}
-else {
-    console.log("Kid")
+switch (month) {
+    case 1:
+        console.log("一月")
+        break
+    case 2:
+        console.log("二月")
+        break
+    case 3:
+        console.log("三月")
+        break
 }
