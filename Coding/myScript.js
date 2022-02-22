@@ -1,13 +1,13 @@
-var month = 1
+var score = 60
 
-switch (month) {
-    case 1:
-        console.log("一月")
-        break
-    case 2:
-        console.log("二月")
-        break
-    case 3:
-        console.log("三月")
-        break
+if (score >= 60) {
+    message = 'pass'
 }
+else {
+    message = 'fail'
+}
+console.log(message)
+
+var message2 = score >= 70 ? 'pass' : 'fail'
+
+console.log(message2)
