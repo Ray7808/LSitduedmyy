@@ -79,6 +79,8 @@
 
 https://lidemy.com/courses/387030/lectures/5929970
 
+https://github.com/Lidemy/ALG101-too-weak-to-leetcode
+
 https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching    
