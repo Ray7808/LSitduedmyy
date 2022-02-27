@@ -69,6 +69,17 @@
 
 ---
 
+假如創造一個txt
+
+> touch test.txt
+
+然後使用
+
+> cat test.txt | node myScript.js
+
+cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成後一個的輸入。
+
+---
 
 
 
@@ -77,10 +88,23 @@
 
 還沒看：
 
-https://lidemy.com/courses/387030/lectures/5929970
+https://lidemy.com/courses/793973/lectures/14419279
 
-https://github.com/Lidemy/ALG101-too-weak-to-leetcode
+https://www.youtube.com/watch?v=v7zv1ixaO3M
+
+https://oj.lidemy.com/problem/1002?_ga=2.140706098.1463100349.1645859799-2126212425.1645264490
 
 https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
-https://github.com/Lidemy/mentor-program-5th-Wangpoching    
+https://github.com/Lidemy/mentor-program-5th-Wangpoching  
+
+
+============
+git commit
+
+
+git commit -am "2/26"
+
+git branch -M main
+git remote add origin https://github.com/Ray7808/LSitduedmyy.git
+git push -u origin main
