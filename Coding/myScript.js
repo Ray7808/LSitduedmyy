@@ -19,36 +19,23 @@ rl.on('close', function () {
 })
 
 function solve(lines) {
+    for (let i = 0; i < lines.length; i++) {
+        tmp = lines[i].split(' ')
+        let a = Number(tmp[0]);
+        let b = Number(tmp[1]);
 
-
-    var solved = []
-    var i = 0
-
-    //console.log(lines[i])
-
-
-    do {
-        //console.log('Now i is ', i)
-        var num = lines[i]
-        var num = num.split(' ')
-        //console.log(Number(num[0]) + Number(num[1]))
-
-        if (Number(num[0]) == Number(num[1]) && Number(num[0]) == 0) {
-            break
+        if (a === 0 && b === 0) {
+            return
         }
         else {
-            solved.push(Number(num[0]) + Number(num[1]))
+            if (a > b) {
+                console.log(a)
+            }
+            else {
+                console.log(b)
+            }
         }
-        i++
-
-    } while (-1)
-
-
-    for (var i = 0; i < solved.length; i++) {
-        console.log(solved[i])
     }
-
-
 
 }
 
