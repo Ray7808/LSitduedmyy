@@ -463,4 +463,4 @@ vscode 開啟 markdown(md 檔)：command + shift + v
 
 查看隱藏資料夾快捷鍵：Command + shift + .
 
-開啟Google Chrome的develop tool 快捷鍵 : command + option + i
+開啟Google Chrome的Devtool 快捷鍵 : command + option + i
