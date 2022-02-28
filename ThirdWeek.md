@@ -79,11 +79,9 @@
 
 cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成後一個的輸入。
 
+
 ---
 
-
-
-=============
 目前看到這：
 
 還沒看：
@@ -95,8 +93,9 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 https://github.com/Lidemy/mentor-program-5th-Wangpoching  
 
 
-============
-git commit
+---
+
+# git commit
 
 
 git commit -am "2/28"
