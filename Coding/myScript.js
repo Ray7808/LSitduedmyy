@@ -21,42 +21,27 @@ rl.on('close', function () {
 })
 
 function solve(lines) {
-    //Obtain all the input message
-    // You can use here to solve your questions
 
-    var OAO = Number(lines[0])
-    if (OAO >= Number(lines[1])) {
-        OAO = Number(lines[1])
-    }
-    var Total = [Number(lines[1])]
-    var Final = 0
+    let OAO = lines[0].split(' ')
 
-    for (var i = 2; i < lines.length; i++) {
-        Total[i - 2] = Number(lines[i])
-    }
-    // console.log(Total)
+    let n = Number(OAO[0])
+    let m = Number(OAO[1])
 
-    //Bubble sort
-    for (var k = 0; k < Total.length; k++) {
-        for (var j = 0; j < Total.length; j++) {
-            if (Total[j] > Total[j + 1]) {
-                var temp = Total[j]
-                Total[j] = Total[j + 1]
-                Total[j + 1] = temp
-            }
+    for (let i = n; i <= m; i++) {
+        //console.log('Now i =', i)
+        let tmp = []
+        tmp = (i.toString()).split('')
+
+        let tmp2 = 0
+        for (let j = 0; j < tmp.length; j++) {
+            tmp2 += Math.pow(Number(tmp[j]), tmp.length)
         }
+        //console.log('Now tmp2 = ', tmp2)
+        if (tmp2 === i) {
+            console.log(i)
+        }
+
     }
-    // console.log(Total)
-
-
-    for (var l = Total.length; l > (Total.length - OAO); l--) {
-        // console.log('Now the Final = ', Final)
-        Final += Total[l - 1]
-    }
-    // console.log('Now the Final = ', Final)
-
-    console.log(Final)
-
 }
 
 

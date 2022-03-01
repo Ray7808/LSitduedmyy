@@ -98,7 +98,7 @@ https://github.com/Lidemy/mentor-program-5th-Wangpoching
 # git commit
 
 
-git commit -am "2/28"
+git commit -am "3/1"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
