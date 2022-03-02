@@ -86,19 +86,22 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 
 還沒看：
 
-https://lidemy.com/courses/793973/lectures/14756775
+https://lidemy.com/courses/389485/lectures/5943008
 
-https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching  
 
+http://web.ntnu.edu.tw/~algo/AlgorithmAnalysis.html#3
+
+沒在用：
+https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 ---
 
 # git commit
 
 
-git commit -am "3/1"
+git commit -am "3/2"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
