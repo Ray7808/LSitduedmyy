@@ -81,13 +81,15 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 
 
 ---
+介紹了選擇排序法、泡沫排序法、插入排序法(撲克牌)
+
+---
 
 目前看到這：
 
 還沒看：
 
-https://lidemy.com/courses/389485/lectures/5943008
-
+https://lidemy.com/courses/389485/lectures/5943010
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching  
 
