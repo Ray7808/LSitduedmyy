@@ -83,7 +83,7 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 ---
 介紹了選擇排序法(選最大最小的先放最邊邊)、泡沫排序法(持續一對一調換)、插入排序法(撲克牌)
 
-介紹合併排序法(把全部從中間一直切，然後在兩倆按照大小不斷排序再融合)、
+介紹合併排序法(把全部從中間一直切，然後在兩兩按照大小不斷排序再融合)、
 快速排序法(讓左邊都小於一個基準數字、右邊都大於，然後不斷對左右兩邊都重複這個操作)
 
 ---
@@ -97,8 +97,6 @@ https://lidemy.com/courses/389485/lectures/5943010
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching  
 
-http://web.ntnu.edu.tw/~algo/AlgorithmAnalysis.html#3
-
 沒在用：
 https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
@@ -107,7 +105,7 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 # git commit
 
 
-git commit -am "3/2"
+git commit -am "3/4"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
