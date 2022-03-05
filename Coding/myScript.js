@@ -5,15 +5,15 @@ var rl = readline.createInterface({
     input: process.stdin
 });
 
-var lines = []// store all the input message
+var lines = [] // store all the input message
 
-rl.on('line', function (line) {
+rl.on('line', function(line) {
 
     lines.push(line)
 
 })
 
-rl.on('close', function () {
+rl.on('close', function() {
 
 
     solve(lines)
@@ -23,6 +23,3 @@ rl.on('close', function () {
 function solve(lines) {
 
 }
-
-
-
