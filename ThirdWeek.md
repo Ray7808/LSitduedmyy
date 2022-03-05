@@ -100,6 +100,7 @@
 > cat test.txt | node myScript.js
 
 cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成後一個的輸入。
+(上述這個是 windows 才需要使用)
 
 ---
 
@@ -115,7 +116,6 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 還沒看：
 
 https://lidemy.com/courses/389485/lectures/5943010
-現在要寫作業二
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
