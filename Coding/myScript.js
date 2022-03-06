@@ -7,40 +7,30 @@ var rl = readline.createInterface({
 
 var lines = [] // store all the input message
 
-rl.on('line', function(line) {
+rl.on('line', function (line) {
 
     lines.push(line)
 })
 
-rl.on('close', function() {
+rl.on('close', function () {
 
     solve(lines)
 
 })
 
 function solve(lines) {
-    let Oldn = lines[0].split('-')
-    let arr = []
-    for (let i = 0; i < Oldn.length; i++) {
-        let tmp0 = Oldn[i].split('')
-        console.log(tmp0)
-        for (let j = 0; j < tmp0.length; j++) {
-            arr.push(tmp0[j])
-        }
+    let test = Number(lines[0])
+    let total = []
+    for (let i = 1; i <= test; i++) {
+        //console.log('Now i is ', i)
+        let tmp = lines[i].split(' ')
+        let x1 = Number(tmp[0])
+        let y1 = Number(tmp[1])
+        let arr0 = [1][2] = { x1, y1 }
+        total.push(arr0)
+        //console.log(arr0)
+        //let distance = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+        //console.log(distance.toFixed(2))
     }
-    console.log(arr)
-        /*
-        let sum1 = 0
-        for (let i = 0; i < n.length; i += 2) {
-            let tmp = Number(n[i]) * 2
-            if (tmp >= 10) {
-                tmp -= 9
-            }
-            sum1 += tmp
-
-        }
-        for (let i = 1; i < n.length; i += 2) {
-
-        }
-         */
+    console.log(total)
 }
