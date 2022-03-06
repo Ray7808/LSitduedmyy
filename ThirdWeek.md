@@ -115,10 +115,13 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 
 還沒看：
 
-https://lidemy.com/courses/389485/lectures/5943010
+https://lidemy.com/courses/793973/lectures/14637260
+
+https://oj.lidemy.com/problem/1033
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
+導師計畫第一期：
 https://lidemy.com/courses/enrolled/378582
 
 沒在用：
