@@ -116,17 +116,38 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 >var os = require('os') //引入os模組(模塊)
 
 再輸入
+
 >console.log(os.platform())
+
+就可以得到這個系統的名稱
+
+---
+# 引用module
+
+在A.js輸入
+> var obj = {名稱、函式等等}
+
+然後在下方輸入(全部轉出去)
+>module.exports = obj
+
+或是輸入(只轉特定名稱或函式)
+>exports.想使用的名稱或函式
+
+之後在B.js輸入
+> let OAO = require('./A.js')
+
+之後即可使用A.js裡面的東西，例如
+>OAO.名稱or函式
 
 ---
 
+
+---
 目前看到這：
 
 還沒看：
 
-https://lidemy.com/courses/793973/lectures/14637260
-
-https://oj.lidemy.com/problem/1033
+https://lidemy.com/courses/402888/lectures/6151027
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
