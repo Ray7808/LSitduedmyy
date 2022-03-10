@@ -1,2 +1,1 @@
-let aa = require('./myModule.js')
-console.log(aa)
+let a = require('./myModule.js')
