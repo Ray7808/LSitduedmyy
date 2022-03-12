@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node ImportMyModule.js",
     "OAO": "echo 123",
-    "test": "jest"
+    "test": "jest sum.test.js"
   },
   "author": "",
   "license": "ISC",
