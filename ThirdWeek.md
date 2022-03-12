@@ -177,17 +177,46 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 
 **小提醒：要將檔案上傳到git時，記得排除node_modules，不然這樣檔案會太大
 
+## npm Script
+今天假如想用npm執行特定檔案或輸出各式訊息時，
+可以打開package.json的Scripts，
+在裡面輸入"start":"node ImportMyModule.js"
 
+之後直接在terminal裡面輸入
+>npm run start
 
+即可直接執行start代表的指令
 
 ---
+# Jest 來寫測試
+可以先去Jest的官網把它載下來，
+輸入
+>npm install --save-dev jest
 
+之後當建構好想測試的funciton之後
+可以在該檔案下方輸入
+>modeule.exports = <該函式名稱>
+
+在這邊是創建sum.js並建立function sum
+然後在sum.js下方輸入
+>module.exports = sum
+
+然後現在要創建測試的程式，
+這邊是創建sum.test.js這個檔案
+並寫入相關測試(詳見檔案)
+之後可以去package.json的Scripts輸入
+>"test":"jest"
+
+然後在terminal輸入
+>npm run test
+
+即可看到測試結果。
+
+---
 
 
 ---
 目前看到這：
-
-先用.gitignore排除node_modules
 
 還沒看：
 
@@ -205,7 +234,7 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 # git commit
 
-git commit -am "3/6"
+git commit -am "3/12"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
