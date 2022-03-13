@@ -235,7 +235,7 @@ TDD是測試驅動開發，意思是先把測試寫好再寫function
 
 還沒看：
 
-https://lidemy.com/courses/402888/lectures/6152077
+https://lidemy.com/courses/402888/lectures/6151056
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
@@ -249,7 +249,7 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 # git commit
 
-git commit -am "3/12"
+git commit -am "3/13"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git

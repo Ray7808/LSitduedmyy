@@ -1,4 +1,5 @@
-const repeat = require('os')
-let a = require('repeat-string')
+arr = [1, 2, 3]
 
-console.log(repeat('A', 5))
+arr2 = [4, 5, 6, ...arr]
+
+console.log(arr2)
