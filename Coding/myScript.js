@@ -1,5 +1,5 @@
-arr = [1, 2, 3]
+function repeat(str, times = 1) {
+    return str.repeat(times)
+}
 
-arr2 = [4, 5, 6, ...arr]
-
-console.log(arr2)
+console.log(repeat('abc', 5))
