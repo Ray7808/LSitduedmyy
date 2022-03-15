@@ -237,7 +237,7 @@ TDD是測試驅動開發，意思是先把測試寫好再寫function
 
 還沒看：
 
-https://lidemy.com/courses/793973/lectures/14680777
+https://lidemy.com/courses/511271/lectures/9771035
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
