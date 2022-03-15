@@ -3,7 +3,9 @@ module.exports = {
         "browser": true,
         "es2021": true,
         "es6": true,
-        "commonjs": true
+        "commonjs": true,
+        "jest": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
@@ -20,5 +22,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        'no-console': off
     }
 }
