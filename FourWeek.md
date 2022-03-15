@@ -5,8 +5,6 @@
 ---
 目前看到這：
 
-把es6的一些語法再稍微看一下
-
 還沒看：
 
 https://lidemy.com/courses/511271/lectures/9771035

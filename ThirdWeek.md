@@ -228,6 +228,22 @@ cat 意味著把檔案內容印出來，而 | 則是把前一個的輸出變成�
 # TDD (Test-Driven Development)
 TDD是測試驅動開發，意思是先把測試寫好再寫function
 
+---
+# 想使用ES6語法
+要先安裝babel，在terminal輸入
+>npm install --save-dev @babel/core @babel/node @babel/preset-env
 
+然後創建.babelrc
+>touch .babelrc
+
+然後在裡面寫上
+>{ "presets": ["@babel/preset-env"]}
+
+就可以使用了。
+
+輸入
+>npx babel-node <欲使用的js檔案>
+
+---
 
 
