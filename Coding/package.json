@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "repeat-string": "^1.6.1"
+    "repeat-string": "^1.6.1",
+    "request": "^2.88.2"
   },
   "name": "coding",
   "version": "1.0.0",

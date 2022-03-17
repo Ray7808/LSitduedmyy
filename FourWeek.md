@@ -1,4 +1,45 @@
-# 網路概論
+# 網頁概論
+
+## 查詢IP位置
+>nslookup github.com
+
+即可看到github的IP位置。
+
+---
+
+## 想直接拿到特定網頁的html檔
+因為有時想看到該網頁所代表的內容，
+這邊可以事先安裝request套件
+>npm intsall request
+
+然後輸入這個套件的一些內容(詳細可看GetRequestInformation.js)
+
+之後輸入
+>node GetRequestInformation > github.html
+
+這邊的github.html可以代換成其他名稱，
+上述的程式碼代表將得到的東西輸入到其他檔案裡面，
+因此可以透過這個方式將該網頁代表的內容重新創建一個新的檔案來裝它。
+
+---
+
+## Header and Body
+這邊可以在GetRequestInformation.js的request裡面輸入
+>console.log(response.headers)
+
+可以藉此看到這個Header內部所傳的一些額外資訊，
+而Body則是主要的資訊。
+
+---
+
+## 參考各個不同的HTTP請求方法
+這邊可以查看
+
+https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods
+
+---
+
+
 
 
 
