@@ -41,6 +41,29 @@ https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods
 ## 實作簡單的 HTTP Server
 在nodeJs裡面有個內建的http套件，詳情可以看HTTPServer.js
 
+---
+## 網路概論 (TIP/UDP)
+HTTP或FTP這種要可靠及穩定的應用層都是建立在TCP這種傳輸層底下的部分，
+像是封包什麼的比較少會漏掉，
+而且TCP會用三次握手(詳情可查wiki)，
+建立多種連接已確定有傳遞成功，
+但是假如要播報一些像是NBA即時戰況的話，
+可以使用像是UDP這種傳輸層，
+雖然會掉比較多封包也較不可靠，
+但是因為沒有傳輸什麼特別大的內容以及重要的資訊，
+也有速度較快的優點，
+因此UDP比較適合使用於這種情況。
+
+## 網路概論總結
+| 名稱      |                 功用                  | 
+| :--:     | :-------------------------------------: 
+| HTTP/FTP |     紙條上的內容                        | 
+| TCP/UDP  |     傳紙條時的三次確認/不確認，一直傳紙條   | 
+| IP       |     寄紙條，寫收件者跟寄件人              | 
+|  實體層   |     郵差幫忙寄信                        |   
+
+---
+
 
 
 
@@ -49,7 +72,7 @@ https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods
 
 還沒看：
 
-https://lidemy.com/courses/511271/lectures/9668272
+https://lidemy.com/courses/511271/lectures/9656523
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
