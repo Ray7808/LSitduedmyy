@@ -38,7 +38,8 @@
 https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods
 
 ---
-
+## 實作簡單的 HTTP Server
+在nodeJs裡面有個內建的http套件，詳情可以看HTTPServer.js
 
 
 
