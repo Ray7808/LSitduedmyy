@@ -49,7 +49,7 @@ https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods
 
 還沒看：
 
-https://lidemy.com/courses/511271/lectures/9668260
+https://lidemy.com/courses/511271/lectures/9668270
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
