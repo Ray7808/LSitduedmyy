@@ -15,7 +15,7 @@
 然後輸入這個套件的一些內容(詳細可看GetRequestInformation.js)
 
 之後輸入
->node GetRequestInformation > github.html
+>node GetRequestInformation.js > github.html
 
 這邊的github.html可以代換成其他名稱，
 上述的程式碼代表將得到的東西輸入到其他檔案裡面，
