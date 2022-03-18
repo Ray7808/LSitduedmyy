@@ -41,7 +41,6 @@ function handleRequest(req, res) {
             //'Location': '/hello'
             'Location': 'https://google.com'
         })
-
         res.end()
         return
     }
