@@ -5,8 +5,6 @@
 
 即可看到github的IP位置。
 
----
-
 ## 想直接拿到特定網頁的html檔
 因為有時想看到該網頁所代表的內容，
 這邊可以事先安裝request套件
@@ -21,16 +19,12 @@
 上述的程式碼代表將得到的東西輸入到其他檔案裡面，
 因此可以透過這個方式將該網頁代表的內容重新創建一個新的檔案來裝它。
 
----
-
 ## Header and Body
 這邊可以在GetRequestInformation.js的request裡面輸入
 >console.log(response.headers)
 
 可以藉此看到這個Header內部所傳的一些額外資訊，
 而Body則是主要的資訊。
-
----
 
 ## 參考各個不同的HTTP請求方法
 這邊可以查看
@@ -66,6 +60,87 @@ HTTP或FTP這種要可靠及穩定的應用層都是建立在TCP這種傳輸層�
 
 ## 什麼是API?
 API是Application Programming Interface(應用程式介面)
+
+
+
+## 簡易串接API
+詳情可以查看TestAPI.js這個檔案。
+
+或是可以使用reqres.in這個網站，有一些專門給別人測試不同API的程式。
+
+## 資料格式的選擇
+- XML (Extensible Markup Language)
+
+  XML跟HTML是相似的語言，例如：
+  <?xml version = "1.0", encoding = "UTF-8"?>
+  <note>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend</body>
+  </note>
+
+- JSON (JavaScript Object Notation)
+   回到TestAPI.js上面，
+   可以看到最新版回傳的資訊是一個JSON格式的字串，
+   因此需要新增一行來將它轉回JSON的資料型態
+
+---
+## 透過網路交換的另外一種方式SOAP
+SOAP (Simple Object Access Protocol)
+其資料交換都透過XML，詳細資料可以查詢SoapUI或是github soap
+
+---
+## Restful究竟是什麼？
+它不是一個協定，只是一種風格，像是以下這樣：
+| 名稱      | 指令    |     指向內容     | 
+| :------: | :--:   | :--------------:|
+| 新增使用者 | POST   |     /users      |
+| 刪除使用者 | DELETE |     /users/:id  |
+| 查詢使用者 | GET    |     /users/:id  |
+| 使用者列表 | GET    |     /users      |
+| 更改使用者 | PATCH  |     /users/:id  |
+
+目的是提高可讀性以及更加直觀地表示要做的部分。
+
+---
+## 簡易串接API NO.2
+詳情可以看TestAPINo2.js
+
+---
+
+## 跟網路相關的一些重要指令
+
+- curl
+   只要安裝好並在terminal輸入
+   >curl <欲get的網站名稱>
+   
+   即可得到該網站回傳的response。
+   這邊可以透過輸入
+   >curl <欲get的檔案名稱> > <欲放入資料的檔案名稱(通常是html)>
+
+   即可將回傳的response輸入到該檔案內容裡，
+   或是可以透過curl將回傳的檔案透過CLI的方式印出JSON格式的結果。
+
+- nslookup
+   先前提過的，
+   可以透過這個指令解析出該server位置是在哪裡，例如：
+   >nslookup github.com
+
+- ping
+   可以透過輸入這個以及欲測試的網站來測試是否可以連上，例如：
+   >ping google.com
+
+- telnet
+   這個算是去ping一個指令的port，例如：
+   >telnet 52.74.223.119 80
+
+   就是為了測試這個位置的port 80有沒有開啟這樣。
+
+   除此之外，假如有順利連上的話，telnet還可以拿來傳資料，
+   透過輸入GET等指令就可以得到該網站的內部一些資訊。
+
+   #### 小備註: 最廣為人知的telnet應用就是ptt
 
 
 ---
