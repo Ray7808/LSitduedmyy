@@ -158,6 +158,9 @@ https://lidemy.com/courses/enrolled/378582
 沒在用：
 https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
+
+等這一切結束，記得把每週要知道的部分再重新整理在這裡。
+
 ---
 
 # git commit
