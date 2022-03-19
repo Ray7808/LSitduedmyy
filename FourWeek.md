@@ -64,7 +64,8 @@ HTTP或FTP這種要可靠及穩定的應用層都是建立在TCP這種傳輸層�
 
 ---
 
-
+## 什麼是API?
+API是Application Programming Interface(應用程式介面)
 
 
 ---
@@ -72,7 +73,7 @@ HTTP或FTP這種要可靠及穩定的應用層都是建立在TCP這種傳輸層�
 
 還沒看：
 
-https://lidemy.com/courses/511271/lectures/9656523
+https://lidemy.com/courses/511271/lectures/9802493
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
