@@ -165,7 +165,7 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 # git commit
 
-git commit -am "3/15"
+git commit -am "3/20"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
