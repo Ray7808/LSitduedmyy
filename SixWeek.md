@@ -2,7 +2,11 @@
 ---
 目前看到這：
 
+先把第四週跟第五週的直播跟完
+
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
+
+https://hackmd.io/@benben6515
 
 https://www.evernote.com/shard/s358/client/snv?noteGuid=cb7acfa7-1450-377d-efe3-831387b100fe&noteKey=8e365929e4b9dfb2554d26355b672e04&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs358%2Fsh%2Fcb7acfa7-1450-377d-efe3-831387b100fe%2F8e365929e4b9dfb2554d26355b672e04
 
