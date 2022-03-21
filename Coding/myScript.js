@@ -22,6 +22,8 @@ function solve(lines) {
     let OAOBefore = 0
     let Final = 0
     let before = 0
+    var test = 0
+    var test2
     //console.log(Answer)
     for (let i = 0; i < n; i++) {
         let tmp = Number(Answer[i])
