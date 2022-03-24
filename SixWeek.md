@@ -14,8 +14,6 @@ https://www.evernote.com/shard/s358/client/snv?noteGuid=cb7acfa7-1450-377d-efe3-
 
 https://lidemy.com/courses/511271/lectures/9802493
 
-https://github.com/Lidemy/mentor-program-5th-Wangpoching
-
 導師計畫第一期：
 https://lidemy.com/courses/enrolled/378582
 
