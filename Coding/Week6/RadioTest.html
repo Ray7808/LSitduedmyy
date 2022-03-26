@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 在這邊的話，因為上面的radio沒有用name來定義同一個group，因此都可以選， -->
+    <!-- 但是下面的radio因為有用name，因此只能選男性或女性的其中一個 -->
+    <form>
+        生理性別：<input type="radio" />男性
+        <input type="radio" />女性
+    </form>
+    <form>
+        生理性別：<input type="radio" name="gender" />男性
+        <input type="radio" name="gender" />女性
+    </form>
+    <!-- 這裡是點選名稱也可以進行的動作，可以提升使用者體驗。 -->
+    <form>
+        生理性別：<input type="radio" name="gender" id="male" /><label for="male">男性</label>
+        <input type="radio" name="gender" id="female" /><label for="female">女性</label>
+    </form>
+</body>
+
+</html>
