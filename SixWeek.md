@@ -113,9 +113,35 @@
 
 ---
 
-## CSS(Cascading Style Sheets)
+## CSS(Cascading Style Sheets 階層式樣式表)
 
+- 詳情也可以查看Week6/style.css的檔案內容。
 
+   較好維護的方式就是在html輸入：
+   >`<link rel="stylesheet" href="(欲載入的css檔案)">`
+
+   常用的像是：
+   >`<link rel="stylesheet" href="./style.css">`
+
+   這樣即可在同個資料夾下的css檔案進行編輯。
+
+- id與class
+   id在html裡面一個名稱只能有一個id，但是class可以有很多個。
+   id在css要用`#(該id名稱){}`，而class在css要用`.(該class名稱){}`
+
+- 同時符合多條件的selector：
+  假如想符合同個標籤又符合特定class時，可以在css裡輸入：
+  >(欲符合的標籤名稱).(欲符合的class){(css內容)}
+
+  而想符合多個特定的class時，可以輸入：
+  >(欲符合的class1).(欲符合的class2){(css內容)}
+
+- 選擇多層不同的架構：
+  假如有一個包了多個div標籤的html檔，在最外層有使用class
+  則內部的div標籤可以使用：
+  >(該class標籤) > div { (css內容) }
+
+  來撰寫內部div標籤的css。
 
 
   
@@ -131,7 +157,7 @@
 ---
 目前看到這：
 
-https://lidemy.com/courses/390445/lectures/6224930
+https://lidemy.com/courses/390445/lectures/5958315
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
