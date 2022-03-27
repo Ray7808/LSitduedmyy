@@ -1,0 +1,49 @@
+/* *表示所有的元素，因此只要用這個就表示所有有顯示的東西都會被選到 */
+*{
+    /* color:red; */
+    /* background-color: red; */
+}
+
+/*  */
+/* 標籤的selector */
+div{
+    /* background-color: red; */
+}
+
+body{
+    /* background-color: green; */
+}
+
+/*  */
+/* id與class的selector */
+/* id的 */
+#div1{
+    background:red;
+}
+#div2{
+    background-color: green;
+}
+/* class的 */
+.OAO{
+    background-color: yellow;
+}
+/* 多個class的(包含OAO/OAO2) */
+.OAO2{
+    color:white;
+}
+
+/* 符合多個標籤與class或id的 */
+div.OAO{
+    background-color: blue;
+}
+
+/* 巢狀結構分層進行撰寫 */
+.multi{
+    color:red;
+}
+.multi > div{
+    color:blue;
+}
+.multi > div > div{
+    color:green;
+}
