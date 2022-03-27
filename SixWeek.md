@@ -1,6 +1,9 @@
 # 網頁模版網站
+可以使用以下連結直接下載下來察看他們所使用的html各個格式長什麼樣子。
 
 參考連結：https://html5up.net
+
+---
 
 ## HTML (HyperText Markup Language 超文本標記語言)
 - <h1~h6> : h代表heading的意思。
@@ -64,7 +67,9 @@
    若要修改內容，可以使用`<input type = "submit" value = "(欲修改的文字)" />`
    即可修改對應的內容。
 
-# SEO (Search Engine Optimization 搜尋引擎優化) 
+---
+
+## SEO (Search Engine Optimization 搜尋引擎優化) 
 ### `<meta>`：主要是給予搜尋引擎妳的一些關鍵字以及內容，方便搜尋引擎找到你來提供一些相關資訊，主要有兩個：
    - keywords
    - description
@@ -95,6 +100,25 @@
 **備註**：其他也有像是給app使用的，像是`<meta property = "al:ios:app_name">`
 
 **重要備註**：<u>可以利用Google Search Console來查看你的網站的點擊率等等重要資訊</u>
+
+---
+
+## Escape 跳脫(假如想單純顯示標籤)
+假如想在網頁顯示`<div></div>`的話，單純在html檔是無法顯示的，要使用以下字元：
+- `&`：&amp;
+- `<`：&lt;
+- `>`：&gt;
+
+要使用右邊這些字符進行代替才可以顯示在網頁上。
+
+---
+
+## CSS(Cascading Style Sheets)
+
+
+
+
+  
    
      
 
