@@ -1,49 +1,132 @@
 /* *表示所有的元素，因此只要用這個就表示所有有顯示的東西都會被選到 */
-*{
+
+* {
     /* color:red; */
     /* background-color: red; */
 }
 
+p {
+    color: black;
+    background-color: red;
+}
+
+
 /*  */
+
+
 /* 標籤的selector */
-div{
+
+div {
     /* background-color: red; */
 }
 
-body{
+body {
     /* background-color: green; */
 }
 
+
 /*  */
+
+
 /* id與class的selector */
+
+
 /* id的 */
-#div1{
-    background:red;
-}
-#div2{
-    background-color: green;
-}
-/* class的 */
-.OAO{
-    background-color: yellow;
-}
-/* 多個class的(包含OAO/OAO2) */
-.OAO2{
-    color:white;
+
+#div1 {
+    background: red;
 }
 
+#div2 {
+    background-color: green;
+}
+
+
+/* class的 */
+
+.OAO {
+    background-color: yellow;
+}
+
+
+/* 多個class的(包含OAO/OAO2) */
+
+.OAO2 {
+    color: white;
+}
+
+
 /* 符合多個標籤與class或id的 */
-div.OAO{
+
+div.OAO {
     background-color: blue;
 }
 
+
 /* 巢狀結構分層進行撰寫 */
-.multi{
-    color:red;
+
+.multi {
+    color: red;
 }
-.multi > div{
-    color:blue;
+
+.multi>div {
+    color: blue;
 }
-.multi > div > div{
-    color:green;
+
+.multi>div>div {
+    color: green;
+}
+
+
+/* + 和 ~ 的區別 */
+
+
+/* +和~可以轉換看看 */
+
+.bg-red+.bg-red {
+    background-color: red;
+}
+
+div~span {
+    background-color: blue;
+}
+
+
+/* Pseudo-classes : hover */
+
+span:hover {
+    color: white;
+}
+
+
+/* Pseudo-classes : nth child */
+
+.wrapper div:first-child {
+    background-color: red;
+}
+
+.wrapper div:nth-child(3) {
+    background-color: blue;
+}
+
+.wrapper div:nth-child(even) {
+    background-color: blueviolet;
+}
+
+.wrapper div:nth-child(2n) {
+    color: aqua;
+}
+
+
+/* Pseudo-elements 偽元素 */
+
+.wrapper2::before {
+    content: "$";
+    background-color: yellow;
+}
+
+.wrapper2::after {
+    /* content: "NTD"; */
+    content: attr(data-symbol);
+    background-color: yellow;
 }

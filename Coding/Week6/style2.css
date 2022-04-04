@@ -1,0 +1,19 @@
+.wrapper {
+    color: red
+}
+
+.item {
+    color: blue;
+}
+
+.item {
+    color: green;
+}
+
+div.wrapper>div.list>div.item {
+    color: yellow !important;
+}
+
+#pickme {
+    color: pink;
+}
