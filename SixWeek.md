@@ -227,32 +227,39 @@
   > content:"attr(data-symbol)";
   > }
 
-### CSS Selector的權重
-   **接下來都在 weight.html 裡面進行:**
+### CSS Selector 的權重
 
-   這邊假如有多個css選到同個標籤時，後面(下面)的優先。然後可以使用DevTools的Styles可以看到最終是哪個選到，然後他們選擇的先後順序是什麼。
-   
-   這邊他們對應的權重順序是
-   >**id > class > 標籤**
+**接下來都在 weight.html 裡面進行:**
 
-   >**越詳細的贏**
+這邊假如有多個 css 選到同個標籤時，後面(下面)的優先。然後可以使用 DevTools 的 Styles 可以看到最終是哪個選到，然後他們選擇的先後順序是什麼。
 
-   但是假如跟直接寫在html裡面的相比，
-   寫在html裡面的則會蓋過CSS檔案裏面的，
-   除非又在css裡面加入一個important標籤，例如:
-   >CSS內容 !importmant;
+這邊他們對應的權重順序是
 
-   這樣這個就會是最前面的那個順序。
+> **id > class > 標籤**
 
+> **越詳細的贏**
 
+但是假如跟直接寫在 html 裡面的相比，
+寫在 html 裡面的則會蓋過 CSS 檔案裏面的，
+除非又在 css 裡面加入一個 important 標籤，例如:
 
+> CSS 內容 !importmant;
 
+這樣這個就會是最前面的那個順序。
+
+### CSS Background
+
+**接下來都在 cssPart2.html 裡面進行:**
+假如今天想調整顏色，除了可以直接輸入顏色名稱，色碼之外，
+也可以輸入 rgb(r,g,b)，這個 r,g,b 分別代表紅色、綠色及藍色的數值。
+
+此外也可以輸入 rgba(r,g,b,a)，這個 a 就是透明度的意思。
 
 ---
 
 目前看到這：
 
-https://lidemy.com/courses/390445/lectures/5958315
+https://lidemy.com/courses/390445/lectures/5958371
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
