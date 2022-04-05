@@ -165,6 +165,8 @@
 
   來撰寫內部 div 標籤的 css。
 
+---
+
 ### 接下來都在+\_~.html 裡面進行:
 
 - `+` 和 `~` 的區別 :
@@ -227,6 +229,8 @@
   > content:"attr(data-symbol)";
   > }
 
+---
+
 ### CSS Selector 的權重
 
 **接下來都在 weight.html 裡面進行:**
@@ -247,19 +251,169 @@
 
 這樣這個就會是最前面的那個順序。
 
+---
+
 ### CSS Background
 
 **接下來都在 cssPart2.html 裡面進行:**
-假如今天想調整顏色，除了可以直接輸入顏色名稱，色碼之外，
-也可以輸入 rgb(r,g,b)，這個 r,g,b 分別代表紅色、綠色及藍色的數值。
+- 顏色與透明度
 
-此外也可以輸入 rgba(r,g,b,a)，這個 a 就是透明度的意思。
+   假如今天想調整顏色，除了可以直接輸入顏色名稱，色碼之外，
+   也可以輸入 rgb(r,g,b)，這個 r,g,b 分別代表紅色、綠色及藍色的數值。
+
+   此外也可以輸入 rgba(r,g,b,a)，這個 a 就是透明度的意思，可調整0~1。
+
+- 背景圖片
+
+   另一方面假如想加入背景圖片的話，可以使用background: url()，例如：
+   >background: url(./bg.jpg);
+
+   就可以進行新增的部分。
+   
+   另外假如假如透過width或height調整寬度高度以致於圖片重複做使用的話，
+   可以輸入no-repeat，這樣就可以只顯示一張圖片的大小這樣。
+
+   而想要調整圖片到畫面中間則可以輸入 `center center`
+   (兩個center是x跟y軸都要在中間)，或是可以輸入`bottom`或是`left`、`right`進行調整。
+
+   以及透過`background-size`去進行背景大小的調整。
+   >background-size: 50% 50% /* 長寬進行設置 */
+
+   或是設置單一的`width`或`height`之後，利用
+   >background-size:cover;
+
+   這樣就可以在不改變寬度或高度的情況下，
+   調整畫面大小已達到隨大小調整圖形的效果。
+ 
+   ---
+
+   ### 邊框border與border-radius
+   這邊可以輸入:
+   >border: 20px solid green;
+
+   來得到邊框都是20px的實心綠線。
+
+   而border-radius則是在邊框尖角的地方加上圓角的部分。
+
+   這邊有個小補充是可以再額外輸入outline，
+   outline算是也是外框，
+   這邊加入outline並不會動到位置，
+   但是border會改變元素的位置。
+
+   這邊有個小應用是想畫圓形的話，可以使用
+   >border-radius:50%; /* 或是width跟height的一半就可以變 */
+
+   另外假如想畫三角形的話：可以使用
+   >background:transparent;
+
+   >width:0px;
+   
+   >height:0px;
+   
+   >border-top:100px solid transparent;
+   
+   >border-bottom:100px solid red;
+   
+   >border-left:100px solid transparent;
+   
+   >border-right:100px solid transparent;
+
+   這樣就可以得到紅色的三角形，
+   然後想調整大小的話就可以針對上面的100px去進行調整。
+   
+   ---
+
+   ### margin and padding(邊距)
+   padding可以把邊緣撐大(也有padding-top、padding-right等等的元素)，
+   直接輸入
+   >padding: 10px 20px;
+
+   第一個數值代表上下，第二個數值代表左右這樣。
+
+   `padding是元素的內邊距，margin則是外邊距。`
+
+   **注意** 這邊因為瀏覽器都會固定幫你的邊緣加margin:8px，
+   因此很多網頁都會特別再多加一行:
+   >margin:0px;
+
+   來把邊緣的白色部分去除。
+
+   ---
+
+   ### 文字相關color、font-family、font-weight與line-height
+   - 大小粗細與字體：
+
+      這邊可以針對文字進行調整，比方說像是`font-size`是調整文字大小。
+
+      而`font-weight`則是調整文字粗細，這邊可以利用
+      `font-weight:bold`代表文字是使用粗體。
+
+      而字體的話可以使用`font-family`，例如：
+      >font-family:新細明體;
+   
+   - 字句與行高：
+      其他像是字距`letter-spacing`以及行高`line-height`也可以進行調整。
+
+      這邊行高`line-height`可以使用
+      >line-height:1.5em
+
+      代表字體大小的1.5倍行高。
+
+      另外可以使用`text-align`就可以讓文字在不同的位置。
+      但是假如因為使用這個的話有時文字太多的話就會超出位置，
+      因此可以使用`padding`去把整個區塊撐開，
+      這樣使用上比較不會有問題。
+
+   - 調整文字空行：
+      假如有文字太長等等的問題可以使用`word-break`，例如：
+      >word-break:break-all
+
+      >word-break:breakword
+
+      `break-all`是不管單字只要在分行位置就強制分行，
+      `breakword`是按照字來進行分行。
+
+      另外想要不管怎麼樣就想在同一行的話，可以使用`white-space`：
+      >white-space:nowrap;
+
+      這樣就可以總是在同一行顯示。
+
+   ### 超出寬度已進行調整：overflow與text-overflow：
+   - overflow:
+      
+      假如內容超出原先設定的寬度或高度時，但是之後的東西不想給別人看到時，
+      可以使用`overflow`：
+      >overflow:hidden
+
+      這樣超出的東西就會被隱藏起來。
+
+      而超出區域還是想被看到的話，可以使用`scroll`或是`auto`
+      >overflow:scroll
+
+      >overflow:auto
+
+      這邊`scroll`是不管有沒有超出都會出現滾輪，
+      `auto`則是有超出的話才會出現滾輪可以滾動這樣。
+
+   - text-overflow:
+      這邊`text-overflow`主要是針對文字上的部分，
+      但是這邊有個額外的小功能是
+      >text-overflow:ellipsis;
+
+      代表假如文字超出範圍的話，會自動顯示...的結果。
+
+
+
+
+
+
+
 
 ---
 
 目前看到這：
 
-https://lidemy.com/courses/390445/lectures/5958371
+https://lidemy.com/courses/390445/lectures/5958486
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 

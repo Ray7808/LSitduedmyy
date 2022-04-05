@@ -1,7 +1,53 @@
+/* background */
 #box1 {
-    background-color: red;
+    /* background-color: red; */
+    background: url(./bg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 450px;
 }
 
 #box2 {
     background-color: rgba(255, 100, 100, 0.3);
+    border: green solid 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#box3 {
+    background: transparent;
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+/* margin and padding */
+#box4 {
+    background: orange;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+#box5 {
+    background: green;
+    width: 100px;
+    height: 100px;
+}
+
+/* 文字相關css */
+#box6 {
+    background: orange;
+    width: 100px;
+    height: 100px;
+    /* color: white; */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 100px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
