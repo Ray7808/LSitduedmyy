@@ -1,0 +1,56 @@
+body {
+    margin: 0px
+}
+
+.box {
+    /* relative相對定位 */
+    /* background: orange;
+    width: 100px;
+    height: 100px;
+    margin: 10px; */
+
+    /* fixed固定定位 */
+    background: orange;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    display: block;
+    position: relative;
+}
+
+/* relative相對定位 */
+/* .box:nth-child(2) {
+    position: relative;
+    top: -20px;
+    right: 30px;
+} */
+
+/* fixed固定定位 */
+/* .box:first-child {
+    position: fixed;
+    width: 100px;
+    background: red;
+    bottom: 100px;
+    right: 0px;
+} */
+
+/* Absolute絕對定位 */
+.box-inner {
+    position: Absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* 決定圖層順序 */
+/* .box:nth-child(7) {
+    background: red;
+    top: 40px;
+    z-index: -1;
+} */
+
+/* 黏住 sticky */
+.box:nth-child(7) {
+    background: red;
+    top: 40px;
+    position: sticky
+}
