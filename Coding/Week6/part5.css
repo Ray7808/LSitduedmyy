@@ -1,0 +1,14 @@
+#box1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    background: orange;
+    line-height: 200px;
+    transition: all 1s;
+}
+
+#box1:hover {
+    transform: scale(5);
+}
