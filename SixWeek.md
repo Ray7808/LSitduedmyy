@@ -256,256 +256,295 @@
 ### CSS Background
 
 **接下來都在 cssPart2.html 裡面進行:**
+
 - 顏色與透明度
 
-   假如今天想調整顏色，除了可以直接輸入顏色名稱，色碼之外，
-   也可以輸入 rgb(r,g,b)，這個 r,g,b 分別代表紅色、綠色及藍色的數值。
+  假如今天想調整顏色，除了可以直接輸入顏色名稱，色碼之外，
+  也可以輸入 rgb(r,g,b)，這個 r,g,b 分別代表紅色、綠色及藍色的數值。
 
-   此外也可以輸入 rgba(r,g,b,a)，這個 a 就是透明度的意思，可調整0~1。
+  此外也可以輸入 rgba(r,g,b,a)，這個 a 就是透明度的意思，可調整 0~1。
 
 - 背景圖片
 
-   另一方面假如想加入背景圖片的話，可以使用background: url()，例如：
-   >background: url(./bg.jpg);
+  另一方面假如想加入背景圖片的話，可以使用 background: url()，例如：
 
-   就可以進行新增的部分。
-   
-   另外假如假如透過width或height調整寬度高度以致於圖片重複做使用的話，
-   可以輸入no-repeat，這樣就可以只顯示一張圖片的大小這樣。
+  > background: url(./bg.jpg);
 
-   而想要調整圖片到畫面中間則可以輸入 `center center`
-   (兩個center是x跟y軸都要在中間)，或是可以輸入`bottom`或是`left`、`right`進行調整。
+  就可以進行新增的部分。
 
-   以及透過`background-size`去進行背景大小的調整。
-   >background-size: 50% 50% /* 長寬進行設置 */
+  另外假如假如透過 width 或 height 調整寬度高度以致於圖片重複做使用的話，
+  可以輸入 no-repeat，這樣就可以只顯示一張圖片的大小這樣。
 
-   或是設置單一的`width`或`height`之後，利用
-   >background-size:cover;
+  而想要調整圖片到畫面中間則可以輸入 `center center`
+  (兩個 center 是 x 跟 y 軸都要在中間)，或是可以輸入`bottom`或是`left`、`right`進行調整。
 
-   這樣就可以在不改變寬度或高度的情況下，
-   調整畫面大小已達到隨大小調整圖形的效果。
- 
-   ---
+  以及透過`background-size`去進行背景大小的調整。
 
-   ### 邊框border與border-radius
-   這邊可以輸入:
-   >border: 20px solid green;
+  > background-size: 50% 50% /_ 長寬進行設置 _/
 
-   來得到邊框都是20px的實心綠線。
+  或是設置單一的`width`或`height`之後，利用
 
-   而border-radius則是在邊框尖角的地方加上圓角的部分。
+  > background-size:cover;
 
-   這邊有個小補充是可以再額外輸入outline，
-   outline算是也是外框，
-   這邊加入outline並不會動到位置，
-   但是border會改變元素的位置。
+  這樣就可以在不改變寬度或高度的情況下，
+  調整畫面大小已達到隨大小調整圖形的效果。
 
-   這邊有個小應用是想畫圓形的話，可以使用
-   >border-radius:50%; /* 或是width跟height的一半就可以變 */
+  ***
 
-   另外假如想畫三角形的話：可以使用
-   >background:transparent;
+  ### 邊框 border 與 border-radius
 
-   >width:0px;
-   
-   >height:0px;
-   
-   >border-top:100px solid transparent;
-   
-   >border-bottom:100px solid red;
-   
-   >border-left:100px solid transparent;
-   
-   >border-right:100px solid transparent;
+  這邊可以輸入:
 
-   這樣就可以得到紅色的三角形，
-   然後想調整大小的話就可以針對上面的100px去進行調整。
-   
-   ---
+  > border: 20px solid green;
 
-   ### margin and padding(邊距)
-   padding可以把邊緣撐大(也有padding-top、padding-right等等的元素)，
-   直接輸入
-   >padding: 10px 20px;
+  來得到邊框都是 20px 的實心綠線。
 
-   第一個數值代表上下，第二個數值代表左右這樣。
+  而 border-radius 則是在邊框尖角的地方加上圓角的部分。
 
-   `padding是元素的內邊距，margin則是外邊距。`
+  這邊有個小補充是可以再額外輸入 outline，
+  outline 算是也是外框，
+  這邊加入 outline 並不會動到位置，
+  但是 border 會改變元素的位置。
 
-   **注意** 這邊因為瀏覽器都會固定幫你的邊緣加margin:8px，
-   因此很多網頁都會特別再多加一行:
-   >body{margin:0px;}
+  這邊有個小應用是想畫圓形的話，可以使用
 
-   來把邊緣的白色部分去除。
+  > border-radius:50%; /_ 或是 width 跟 height 的一半就可以變 _/
 
-   ---
+  另外假如想畫三角形的話：可以使用
 
-   ### 文字相關color、font-family、font-weight與line-height
-   - 大小粗細與字體：
+  > background:transparent;
 
-      這邊可以針對文字進行調整，比方說像是`font-size`是調整文字大小。
+  > width:0px;
 
-      而`font-weight`則是調整文字粗細，這邊可以利用
-      `font-weight:bold`代表文字是使用粗體。
+  > height:0px;
 
-      而字體的話可以使用`font-family`，例如：
-      >font-family:新細明體;
-   
-   - 字句與行高：
-      其他像是字距`letter-spacing`以及行高`line-height`也可以進行調整。
+  > border-top:100px solid transparent;
 
-      這邊行高`line-height`可以使用
-      >line-height:1.5em
+  > border-bottom:100px solid red;
 
-      代表字體大小的1.5倍行高。
+  > border-left:100px solid transparent;
 
-      另外可以使用`text-align`就可以讓文字在不同的位置。
-      但是假如因為使用這個的話有時文字太多的話就會超出位置，
-      因此可以使用`padding`去把整個區塊撐開，
-      這樣使用上比較不會有問題。
+  > border-right:100px solid transparent;
 
-   - 調整文字空行：
-      假如有文字太長等等的問題可以使用`word-break`，例如：
-      >word-break:break-all
+  這樣就可以得到紅色的三角形，
+  然後想調整大小的話就可以針對上面的 100px 去進行調整。
 
-      >word-break:breakword
+  ***
 
-      `break-all`是不管單字只要在分行位置就強制分行，
-      `breakword`是按照字來進行分行。
+  ### margin and padding(邊距)
 
-      另外想要不管怎麼樣就想在同一行的話，可以使用`white-space`：
-      >white-space:nowrap;
+  padding 可以把邊緣撐大(也有 padding-top、padding-right 等等的元素)，
+  直接輸入
 
-      這樣就可以總是在同一行顯示。
+  > padding: 10px 20px;
 
-   ### 超出寬度已進行調整：overflow與text-overflow：
-   - overflow:
-      
-      假如內容超出原先設定的寬度或高度時，但是之後的東西不想給別人看到時，
-      可以使用`overflow`：
-      >overflow:hidden
+  第一個數值代表上下，第二個數值代表左右這樣。
 
-      這樣超出的東西就會被隱藏起來。
+  `padding是元素的內邊距，margin則是外邊距。`
 
-      而超出區域還是想被看到的話，可以使用`scroll`或是`auto`
-      >overflow:scroll
+  **注意** 這邊因為瀏覽器都會固定幫你的邊緣加 margin:8px，
+  因此很多網頁都會特別再多加一行:
 
-      >overflow:auto
+  > body{margin:0px;}
 
-      這邊`scroll`是不管有沒有超出都會出現滾輪，
-      `auto`則是有超出的話才會出現滾輪可以滾動這樣。
+  來把邊緣的白色部分去除。
 
-   - text-overflow:
-      這邊`text-overflow`主要是針對文字上的部分，
-      但是這邊有個額外的小功能是
-      >text-overflow:ellipsis;
+  ***
 
-      代表假如文字超出範圍的話，會自動顯示...的結果。
-   ### 漸變的效果：transition
-     假如有針對一些標籤使用hover(滑鼠滑上去會變化)的功能，
-     但是因為是馬上變化，觀感沒有那麼地好，
-     因此會在原先未使用hover的標籤裡面輸入
-     >transition: all 1s;
+  ### 文字相關 color、font-family、font-weight 與 line-height
 
-     這樣的話它會使有用hover的該標籤有一個逐漸變化的效果(持續1秒)。
-     
-     **transition備註**：第一參數是想對哪個部分有漸變的效果，
-     第二個是持續的時間，第三個則是可以調整漸變的效果。
-     第三個可以先在css裡transition的第三個參數輸入`ease-in`
-     之後打開DevTools然後去styles那邊可以點選`ease-in`的部分，
-     可以調整它變化的幅度，然後再把對應的參數輸入回css裡面就可以了。
-     
-     這邊要注意的是
-     `transition不要放在hover裏面`
-     因為這樣會導致當你滑鼠移開時，就沒有那個漸變的效果。
+  - 大小粗細與字體：
 
-     另外transition假如有改屬性的話，可能會有`效能問題`。
+    這邊可以針對文字進行調整，比方說像是`font-size`是調整文字大小。
 
-     **transition備註2**：通常在使用transition外，
-     也會針對hover裡面額外輸入一個參數：
-     >cursor:pointer;
+    而`font-weight`則是調整文字粗細，這邊可以利用
+    `font-weight:bold`代表文字是使用粗體。
 
-     這個是當滑鼠移上去時，
-     其鼠標會變成一個可點選的圖示，
-     會增加使用者體驗。
+    而字體的話可以使用`font-family`，例如：
+
+    > font-family:新細明體;
+
+  - 字句與行高：
+    其他像是字距`letter-spacing`以及行高`line-height`也可以進行調整。
+
+    這邊行高`line-height`可以使用
+
+    > line-height:1.5em
+
+    代表字體大小的 1.5 倍行高。
+
+    另外可以使用`text-align`就可以讓文字在不同的位置。
+    但是假如因為使用這個的話有時文字太多的話就會超出位置，
+    因此可以使用`padding`去把整個區塊撐開，
+    這樣使用上比較不會有問題。
+
+  - 調整文字空行：
+    假如有文字太長等等的問題可以使用`word-break`，例如：
+
+    > word-break:break-all
+
+    > word-break:breakword
+
+    `break-all`是不管單字只要在分行位置就強制分行，
+    `breakword`是按照字來進行分行。
+
+    另外想要不管怎麼樣就想在同一行的話，可以使用`white-space`：
+
+    > white-space:nowrap;
+
+    這樣就可以總是在同一行顯示。
+
+  ### 超出寬度已進行調整：overflow 與 text-overflow：
+
+  - overflow:
+
+    假如內容超出原先設定的寬度或高度時，但是之後的東西不想給別人看到時，
+    可以使用`overflow`：
+
+    > overflow:hidden
+
+    這樣超出的東西就會被隱藏起來。
+
+    而超出區域還是想被看到的話，可以使用`scroll`或是`auto`
+
+    > overflow:scroll
+
+    > overflow:auto
+
+    這邊`scroll`是不管有沒有超出都會出現滾輪，
+    `auto`則是有超出的話才會出現滾輪可以滾動這樣。
+
+  - text-overflow:
+    這邊`text-overflow`主要是針對文字上的部分，
+    但是這邊有個額外的小功能是
+
+    > text-overflow:ellipsis;
+
+    代表假如文字超出範圍的話，會自動顯示...的結果。
+
+  ### 漸變的效果：transition
+
+  假如有針對一些標籤使用 hover(滑鼠滑上去會變化)的功能，
+  但是因為是馬上變化，觀感沒有那麼地好，
+  因此會在原先未使用 hover 的標籤裡面輸入
+
+  > transition: all 1s;
+
+  這樣的話它會使有用 hover 的該標籤有一個逐漸變化的效果(持續 1 秒)。
+
+  **transition 備註**：第一參數是想對哪個部分有漸變的效果，
+  第二個是持續的時間，第三個則是可以調整漸變的效果。
+  第三個可以先在 css 裡 transition 的第三個參數輸入`ease-in`
+  之後打開 DevTools 然後去 styles 那邊可以點選`ease-in`的部分，
+  可以調整它變化的幅度，然後再把對應的參數輸入回 css 裡面就可以了。
+
+  這邊要注意的是
+  `transition不要放在hover裏面`
+  因為這樣會導致當你滑鼠移開時，就沒有那個漸變的效果。
+
+  另外 transition 假如有改屬性的話，可能會有`效能問題`。
+
+  **transition 備註 2**：通常在使用 transition 外，
+  也會針對 hover 裡面額外輸入一個參數：
+
+  > cursor:pointer;
+
+  這個是當滑鼠移上去時，
+  其鼠標會變成一個可點選的圖示，
+  會增加使用者體驗。
 
 ---
 
-### CSS position定位
+### CSS position 定位
 
 **接下來都在 part4.html 裡面進行:**
-   - relative 相對定位
 
-      這邊可以輸入
-      >postive:relative;
+- relative 相對定位
 
-      之後就可以加入
-      >top:20px
-      
-      來移動20px等等(可以調上下左右都行)
-   - fixed 固定定位
-     
-     如同字面上的位置，不管怎麼移動，他都會固定在一個固定的位置。
-     這邊可以輸入
-      >postive:fixed;
-   - Absolute 絕對定位
-     絕對定位要針對某個參考點進行絕對定位，
-     因此就是網上找，找到不是預設static的元素，
-     這邊在`class="box"`這邊可以找到，
-     因此就可以定在那個位置，
-     但是假如沒有的話，就會最終找到body並進行對應的定位這樣。
+  這邊可以輸入
 
-     這邊可以輸入
-      >postive:absolute;
+  > postive:relative;
 
-      即可以進行使用。
+  之後就可以加入
 
-      **小備註**：這邊提到假如有元素事先使用絕對定位時，
-      之後再新增元素在一樣的子標籤時，
-      因為使用絕對定位會使該標籤脫離原先的排版流程，
-      因此後續的元素會出現在原先絕對定位前的標籤在的位置。
-      就是假裝已經絕對定位的標籤不存在，
-      然後來做排版的部分。
-      
+  > top:20px
 
-  ### 決定圖層順序 z-index
-     
-   這邊先將兩個標籤用不同顏色匡起來並放在同個位置，
-   可以看到其中一個個標籤被覆蓋住，
-   這邊可以在該標籤輸入
-   >z-index:(數值(可正可負，可以決定該圖層順序))
-   
-   就可以將原先被覆蓋的標籤拯救回來。
+  來移動 20px 等等(可以調上下左右都行)
 
-  ### 黏住 sticky (新瀏覽器才有)
-   這邊可以輸入
-   >position:sticky;
+- fixed 固定定位
 
-   一般在使用上有沒有這個屬性其實都沒差，
-   但是假如將瀏覽器的畫面往下滾動，
-   該標籤會在最上端那邊就再也上不去了，
-   算是一個蠻有趣的屬性。
-      
-### CSS 調整part5
+  如同字面上的位置，不管怎麼移動，他都會固定在一個固定的位置。
+  這邊可以輸入
+
+  > postive:fixed;
+
+- Absolute 絕對定位
+  絕對定位要針對某個參考點進行絕對定位，
+  因此就是網上找，找到不是預設 static 的元素，
+  這邊在`class="box"`這邊可以找到，
+  因此就可以定在那個位置，
+  但是假如沒有的話，就會最終找到 body 並進行對應的定位這樣。
+
+  這邊可以輸入
+
+  > postive:absolute;
+
+  即可以進行使用。
+
+  **小備註**：這邊提到假如有元素事先使用絕對定位時，
+  之後再新增元素在一樣的子標籤時，
+  因為使用絕對定位會使該標籤脫離原先的排版流程，
+  因此後續的元素會出現在原先絕對定位前的標籤在的位置。
+  就是假裝已經絕對定位的標籤不存在，
+  然後來做排版的部分。
+
+### 決定圖層順序 z-index
+
+這邊先將兩個標籤用不同顏色匡起來並放在同個位置，
+可以看到其中一個個標籤被覆蓋住，
+這邊可以在該標籤輸入
+
+> z-index:(數值(可正可負，可以決定該圖層順序))
+
+就可以將原先被覆蓋的標籤拯救回來。
+
+### 黏住 sticky (新瀏覽器才有)
+
+這邊可以輸入
+
+> position:sticky;
+
+一般在使用上有沒有這個屬性其實都沒差，
+但是假如將瀏覽器的畫面往下滾動，
+該標籤會在最上端那邊就再也上不去了，
+算是一個蠻有趣的屬性。
+
+### CSS 調整 part5
 
 **接下來都在 part5.html 裡面進行:**
-   - transform
-     這邊假如要針對標籤進行放大縮小旋轉等功能的話，
-     可以使用`transform`，
-     其範例在part5裡面顯示，
-     另外也可以透過DevTools裡面看到還有其他相關的功能可以使用。  
 
+- transform
+  這邊假如要針對標籤進行放大縮小旋轉等功能的話，
+  可以使用`transform`，
+  其範例在 part5 裡面顯示，
+  另外也可以透過 DevTools 裡面看到還有其他相關的功能可以使用。
 
+- inline, block, inline-block
 
+  常見的像是 div、h1 或是 p 等等的標籤就是 block 標籤(可調寬高也可調上下邊距，但是不可併排)
 
+  而 span 或是 a 等等的標籤則是 inline 標籤(不可調寬高也不可調上下邊距，但是可併排)
+  因此假如輸入
 
+  > display:inline-block;
 
+  就可以擁有 inline 跟 block 的各個優點。
 
 ---
 
 目前看到這：
 
-之後還是可以先回到part2做使用。
+之後還是可以先回到 part2 做使用。
 
 https://lidemy.com/courses/390445/lectures/5958412
 
