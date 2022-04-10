@@ -1,0 +1,53 @@
+.Top {
+    height: 80px;
+}
+
+.Top__header {
+    width: 200px;
+    /* height: 150px; */
+    display: inline-block;
+    font-size: 35px;
+    color: rgb(126, 206, 126);
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 930px;
+}
+
+.Top__info {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    transition: all 1s;
+    font-size: 20px;
+    /* background: pink; */
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.Top__info:hover {
+    background-color: pink;
+}
+
+.IMG1__Text {
+    background: url(./2.png) no-repeat;
+    width: cover;
+    height: 580px;
+    line-height: 580px;
+
+}
+
+.IMG1__Text::before {
+    background-color: rgba(0, 0, 0, 0.15);
+    content: '咬一口廚房';
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 65px;
+    color: white;
+    font-family: bold;
+    text-align: center;
+
+}
