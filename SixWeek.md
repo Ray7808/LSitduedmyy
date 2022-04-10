@@ -544,7 +544,7 @@
 
 目前看到這：
 
-之後還是可以先回到 part2 做使用。
+HW6先把基本版面生出來，在看怎麼切版。
 
 https://lidemy.com/courses/390445/lectures/5958412
 
