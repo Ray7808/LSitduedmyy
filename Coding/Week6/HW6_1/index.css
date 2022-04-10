@@ -1,53 +1,178 @@
+body {
+    margin: 0px;
+}
+
 .Top {
     height: 80px;
+
 }
 
 .Top__header {
-    width: 200px;
-    /* height: 150px; */
+    width: 300px;
     display: inline-block;
     font-size: 35px;
     color: rgb(126, 206, 126);
     text-align: center;
     margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 930px;
+    vertical-align: middle;
 }
 
 .Top__info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
     width: 100px;
     height: 60px;
     border-radius: 10px;
     text-align: center;
     display: inline-block;
-    transition: all 1s;
+    transition: all 0.5s;
     font-size: 20px;
-    /* background: pink; */
     line-height: 60px;
     cursor: pointer;
+    vertical-align: middle;
+
 }
 
 .Top__info:hover {
     background-color: pink;
+    color: white;
 }
 
 .IMG1__Text {
-    background: url(./2.png) no-repeat;
+    background: url(./2.png) no-repeat center;
     width: cover;
-    height: 580px;
-    line-height: 580px;
-
+    height: 450px;
+    line-height: 450px;
+    vertical-align: middle;
 }
 
 .IMG1__Text::before {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.25);
     content: '咬一口廚房';
     display: block;
     height: 100%;
     width: 100%;
-    font-size: 65px;
+    font-size: 55px;
     color: white;
-    font-family: bold;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Description {
+    height: 250px;
+    width: cover;
+}
+
+.Description__title::before {
+    content: "";
+    width: 15px;
+    height: 30px;
+    background-color: green;
+    display: inline-block;
+}
+
+.Description__title {
+    margin-top: 90px;
+    height: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
     text-align: center;
 
+}
+
+.Description__content {
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+    white-space: pre-line;
+    line-height: 35px;
+}
+
+
+.Selector {
+    width: cover;
+    height: 250px;
+    border: 5px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.Selector__Order {
+    background-color: rgb(59, 127, 228);
+    color: green;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 0px auto;
+    font-size: 30px;
+    text-align: center;
+    line-height: 150px;
+    border: 45px solid rgb(59, 127, 228);
+    border-radius: 20px;
+    transition: all 0.5s;
+
+}
+
+.Selector__Order:hover {
+    transform: scale(1.2);
+
+}
+
+.Center__White {
+    width: 50px;
+    display: inline-block;
+}
+
+.Selector__Search {
+    background-color: rgb(237, 238, 178);
+    color: green;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 0px auto;
+    font-size: 30px;
+    text-align: center;
+    line-height: 150px;
+    border: 45px solid rgb(237, 238, 178);
+    border-radius: 20px;
+    transition: all 0.5s;
+
+}
+
+.Selector__Search:hover {
+    transform: scale(1.2);
+
+}
+
+.Menu {
+    height: 550px;
+    width: cover;
+    margin: auto;
+    text-align: center;
+}
+
+.Menu__title::before {
+    content: "";
+    width: 15px;
+    height: 30px;
+    background-color: green;
+    display: inline-block;
+}
+
+.Menu__title {
+    margin: 45px;
+    height: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    text-align: center;
+    display: block;
+}
+
+.IMG2 {
+    display: inline-block;
+    height: 82%;
+    width: auto;
 }
