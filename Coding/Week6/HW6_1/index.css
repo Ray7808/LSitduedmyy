@@ -64,7 +64,7 @@ body {
     width: cover;
 }
 
-.Description__title::before {
+.title::before {
     content: "";
     width: 15px;
     height: 30px;
@@ -72,8 +72,8 @@ body {
     display: inline-block;
 }
 
-.Description__title {
-    margin-top: 90px;
+.title {
+    margin-top: 45px;
     height: 35px;
     font-weight: bold;
     text-align: center;
@@ -149,26 +149,7 @@ body {
 .Menu {
     height: 550px;
     width: cover;
-    margin: auto;
-    text-align: center;
-}
-
-.Menu__title::before {
-    content: "";
-    width: 15px;
-    height: 30px;
-    background-color: green;
-    display: inline-block;
-}
-
-.Menu__title {
-    margin: 45px;
-    height: 35px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 35px;
-    text-align: center;
-    display: block;
+    /* text-align: center; */
 }
 
 .IMG2 {

@@ -544,8 +544,6 @@
 
 目前看到這：
 
-HW6先把基本版面生出來，在看怎麼切版。
-
 https://lidemy.com/courses/390445/lectures/5958412
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
