@@ -542,9 +542,35 @@
 
 ---
 
+### GoogleChrome的Console
+ - console.table(`物件名稱`)
+   
+   一般來說是使用`console.log`來印出東西，但是假如想要方面直接地看到
+   物件表示的方式，可以使用`console.table`。
+
+   example:
+   >console.table(object); //object是一個物件
+
+ - console.time 以及 console.timeEnd
+
+   這邊主要是希望透過上述的函式呈現計時器的功能，
+   假如想量測某個函式作用的時間，
+   可以在開頭及結尾的地方使用這個函式。
+
+   example:
+   >console.time('(欲關注或設定的名稱)'); //在某行先加入已進行計算
+   
+   >console.timeEmd('(欲關注或設定的名稱)'); //這邊會顯示從上次加入計算到現在所計算的時間
+
+ - setTimeout(`函式名稱及內容`,`先等待的時間`)
+   
+   這個功能是可以在等待特定時間後，才執行裡面的程式。
+
+---
+
 目前看到這：
 
-https://lidemy.com/courses/390445/lectures/5958412
+https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
