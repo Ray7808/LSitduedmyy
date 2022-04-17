@@ -1,159 +1,64 @@
-body {
-    margin: 0px;
+* {
+    font-family: Questrial, sans-serif;
 }
 
-.Top {
-    height: 80px;
+.navbar .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+    padding: 0 20px;
+    background: white;
+    /* border: black 2px solid; */
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 12px;
+}
+
+.navbar__SiteName {
+    color: #489846;
+    font-size: 36px;
+}
+
+.navbar__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+.navbar__list>li {
+    margin-left: 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
 
 }
 
-.Top__header {
-    width: 300px;
-    display: inline-block;
-    font-size: 35px;
-    color: rgb(126, 206, 126);
-    text-align: center;
-    margin-top: 10px;
-    vertical-align: middle;
-}
-
-.Top__info {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    width: 100px;
-    height: 60px;
-    border-radius: 10px;
-    text-align: center;
-    display: inline-block;
-    transition: all 0.5s;
-    font-size: 20px;
-    line-height: 60px;
-    cursor: pointer;
-    vertical-align: middle;
-
-}
-
-.Top__info:hover {
-    background-color: pink;
-    color: white;
-}
-
-.IMG1__Text {
-    background: url(./2.png) no-repeat center;
-    width: cover;
-    height: 450px;
-    line-height: 450px;
-    vertical-align: middle;
-}
-
-.IMG1__Text::before {
-    background-color: rgba(0, 0, 0, 0.25);
-    content: '咬一口廚房';
+.navbar__list>li>a {
+    text-decoration: none;
     display: block;
-    height: 100%;
-    width: 100%;
-    font-size: 55px;
+    padding: 12px 24px;
+    color: black;
+    transition: color 0.2s;
+}
+
+.active {
+    background: #ff7286;
+}
+
+.navbar__list>li:hover {
+    background: #ff7286;
+}
+
+.navbar__list>li>a:hover {
     color: white;
-    font-weight: bold;
-    text-align: center;
 }
 
-.Description {
-    height: 250px;
-    width: cover;
-}
-
-.title::before {
-    content: "";
-    width: 15px;
-    height: 30px;
-    background-color: green;
-    display: inline-block;
-}
-
-.title {
-    margin-top: 45px;
-    height: 35px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 35px;
-    text-align: center;
-
-}
-
-.Description__content {
-    text-align: center;
-    width: 1200px;
-    margin: auto;
-    white-space: pre-line;
-    line-height: 35px;
-}
-
-
-.Selector {
-    width: cover;
-    height: 250px;
-    border: 5px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.Selector__Order {
-    background-color: rgb(59, 127, 228);
-    color: green;
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    margin: 0px auto;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
-    border: 45px solid rgb(59, 127, 228);
-    border-radius: 20px;
-    transition: all 0.5s;
-
-}
-
-.Selector__Order:hover {
-    transform: scale(1.2);
-
-}
-
-.Center__White {
-    width: 50px;
-    display: inline-block;
-}
-
-.Selector__Search {
-    background-color: rgb(237, 238, 178);
-    color: green;
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    margin: 0px auto;
-    font-size: 30px;
-    text-align: center;
-    line-height: 150px;
-    border: 45px solid rgb(237, 238, 178);
-    border-radius: 20px;
-    transition: all 0.5s;
-
-}
-
-.Selector__Search:hover {
-    transform: scale(1.2);
-
-}
-
-.Menu {
-    height: 550px;
-    width: cover;
-    /* text-align: center; */
-}
-
-.IMG2 {
-    display: inline-block;
-    height: 82%;
-    width: auto;
+.navbar__list li.active a,
+.navbar__list li:hover a {
+    color: #ffff;
 }
