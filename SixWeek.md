@@ -568,9 +568,28 @@
 
 ---
 
-目前看到這：
+### GoogleChrome的常用插件
+ - Type Sample
+   可以針對點選的文字查看`字型`及`大小`。
+ - Dimensions
+   點選就可以看不同區塊之間的pixel數量。
+ - Pesticide for Chrome
+   點選就可以查看不同網頁上，他們各自設定的區塊大小及大概設置，可以幫助初學者建構網頁。
+ - Web Server for Chrome
+   這個是可以模擬本地的Server，或是可以直接用手機進行開啟，
+   只是需要手機跟電腦都是連同一個wifi才可以。
+
+---
+
+## 目前看到這：
+
+下週可以回到udemy看最後的部分
+
+之後等教jQuery再回去看金魚腦後續的部分。
 
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
+
+http://flexboxfroggy.com
 
 https://github.com/Lidemy/mentor-program-5th-Wangpoching
 
