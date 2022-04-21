@@ -55,3 +55,31 @@
     background: rgb(248, 126, 146);
     color: white;
 }
+
+.Image__related {
+    height: 450px;
+
+}
+
+.Image__background {
+    background: url('./2.png') center/cover no-repeat;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Image__background__black {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Image__word {
+    font-size: 55px;
+    color: white;
+}
