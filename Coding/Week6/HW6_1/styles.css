@@ -83,3 +83,37 @@
     font-size: 55px;
     color: white;
 }
+
+.section {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+}
+
+.section__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__title>h2 {
+    font-size: 36px;
+    font-weight: bold;
+    border-left: 15px solid #a3dea2;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 150px;
+}
+
+.section__desc {
+    display: flex;
+    justify-content: center;
+}
+
+.section__desc>p {
+    width: 75%;
+    text-align: center;
+    line-height: 30px;
+}
