@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Discussing about how to use form function -->
+<!-- form part 1 -->
 <html lang="zh-hant">
   <head>
     <meta charset="UTF-8" />
@@ -51,6 +52,24 @@
         minlength="4"
         maxlength="10"
       />
+      <br />
+      <label for="area">地區：</label>
+      <input list="arealist" type="text" name="area" id="area" />
+      <datalist id="arealist">
+        <option value="台北市">台北市</option>
+        <option value="基隆市">基隆市</option>
+        <option value="新北市">新北市</option>
+      </datalist>
+      <br />
+      <label for="suggestion">給網站的建議：</label>
+      <br />
+      <textarea
+        name="suggestion"
+        id="suggestion"
+        cols="30"
+        rows="10"
+        placeholder="感謝提供建議！"
+      ></textarea>
       <br />
       0<input type="range" min="0" max="100" />100
       <br />
