@@ -161,6 +161,28 @@
   width: 25%;
 }
 
+.comment {
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+}
+
+.comment__part {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  border: solid black 1px;
+  border-radius: 8px;
+}
+
+.item {
+  background: url("./p-1.png") center/cover no-repeat;
+  width: 30%;
+  height: 30%;
+}
+
 .footer__top {
   display: flex;
   justify-content: space-between;
