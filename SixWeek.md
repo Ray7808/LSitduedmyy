@@ -542,51 +542,57 @@
 
 ---
 
-### GoogleChrome的Console
- - console.table(`物件名稱`)
-   
-   一般來說是使用`console.log`來印出東西，但是假如想要方面直接地看到
-   物件表示的方式，可以使用`console.table`。
+### GoogleChrome 的 Console
 
-   example:
-   >console.table(object); //object是一個物件
+- console.table(`物件名稱`)
 
- - console.time 以及 console.timeEnd
+  一般來說是使用`console.log`來印出東西，但是假如想要方面直接地看到
+  物件表示的方式，可以使用`console.table`。
 
-   這邊主要是希望透過上述的函式呈現計時器的功能，
-   假如想量測某個函式作用的時間，
-   可以在開頭及結尾的地方使用這個函式。
+  example:
 
-   example:
-   >console.time('(欲關注或設定的名稱)'); //在某行先加入已進行計算
-   
-   >console.timeEmd('(欲關注或設定的名稱)'); //這邊會顯示從上次加入計算到現在所計算的時間
+  > console.table(object); //object 是一個物件
 
- - setTimeout(`函式名稱及內容`,`先等待的時間`)
-   
-   這個功能是可以在等待特定時間後，才執行裡面的程式。
+- console.time 以及 console.timeEnd
+
+  這邊主要是希望透過上述的函式呈現計時器的功能，
+  假如想量測某個函式作用的時間，
+  可以在開頭及結尾的地方使用這個函式。
+
+  example:
+
+  > console.time('(欲關注或設定的名稱)'); //在某行先加入已進行計算
+
+  > console.timeEmd('(欲關注或設定的名稱)'); //這邊會顯示從上次加入計算到現在所計算的時間
+
+- setTimeout(`函式名稱及內容`,`先等待的時間`)
+
+  這個功能是可以在等待特定時間後，才執行裡面的程式。
 
 ---
 
-### GoogleChrome的常用插件
- - Type Sample
-   可以針對點選的文字查看`字型`及`大小`。
- - Dimensions
-   點選就可以看不同區塊之間的pixel數量。
- - Pesticide for Chrome
-   點選就可以查看不同網頁上，他們各自設定的區塊大小及大概設置，可以幫助初學者建構網頁。
- - Web Server for Chrome
-   這個是可以模擬本地的Server，或是可以直接用手機進行開啟，
-   只是需要手機跟電腦都是連同一個wifi才可以。
+### GoogleChrome 的常用插件
+
+- Type Sample
+  可以針對點選的文字查看`字型`及`大小`。
+- Dimensions
+  點選就可以看不同區塊之間的 pixel 數量。
+- Pesticide for Chrome
+  點選就可以查看不同網頁上，他們各自設定的區塊大小及大概設置，可以幫助初學者建構網頁。
+- Web Server for Chrome
+  這個是可以模擬本地的 Server，或是可以直接用手機進行開啟，
+  只是需要手機跟電腦都是連同一個 wifi 才可以。
 
 ---
 
 ## 目前看到這：
 
-下週可以回到udemy看最後的部分
+把之前 udemy 講解如何移動 div 到中間位置在看過
+
+下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
 
-之後等教jQuery再回去看金魚腦後續的部分。
+之後等教 jQuery 再回去看金魚腦後續的部分。
 
 https://github.com/Lidemy/mentor-program-5th-oliver841025
 
