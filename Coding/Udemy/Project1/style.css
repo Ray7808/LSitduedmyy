@@ -3,6 +3,25 @@
   padding: 0;
   box-sizing: border-box;
   /* 使用border-box比較不會有加入padding後，下方有多餘的scroll bar */
+
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.headerTitle {
+  font-size: 2.5rem;
+}
+
+.headerText {
+  font-size: 1.5rem;
 }
 
 header {
@@ -29,4 +48,5 @@ nav > ul > li {
 ul > li > a {
   color: white;
   text-decoration: none;
+  font-size: 1.25rem;
 }
