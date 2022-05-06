@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 使用border-box比較不會有加入padding後，下方有多餘的scroll bar */
+}
+
+header {
+  background-color: #c4c4c4;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav {
+  background-color: #3b383c;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+nav > ul > li {
+  padding: 0.5rem 0.75rem;
+}
+
+ul > li > a {
+  color: white;
+  text-decoration: none;
+}
