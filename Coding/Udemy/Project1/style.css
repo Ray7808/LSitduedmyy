@@ -46,7 +46,31 @@ nav > ul > li {
 }
 
 ul > li > a {
-  color: white;
+  color: rgb(153, 153, 153);
   text-decoration: none;
   font-size: 1.25rem;
+  transition: color 0.25s ease;
+}
+
+ul > li > .active {
+  color: white;
+}
+
+ul > li > a:hover {
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+}
+
+main > .left,
+main > .right {
+  padding: 1.5rem;
+}
+
+main > .right > h4 {
+  font-size: 1.25rem;
+  text-align: center;
 }
