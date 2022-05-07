@@ -45,22 +45,22 @@ nav > ul > li {
   padding: 0.5rem 0.75rem;
 }
 
-ul > li > a {
+nav > ul > li > a {
   color: rgb(153, 153, 153);
   text-decoration: none;
   font-size: 1.25rem;
   transition: color 0.25s ease;
 }
 
-ul > li > .active {
+nav > ul > li > .active {
   color: white;
 }
 
-ul > li > a:hover {
+nav > ul > li > a:hover {
   color: white;
 }
 
-main {
+main.index {
   width: 100%;
   display: flex;
 }
@@ -73,4 +73,50 @@ main > .right {
 main > .right > h4 {
   font-size: 1.25rem;
   text-align: center;
+}
+
+section.right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.right > p {
+  margin: 1rem 0rem;
+}
+
+/* Argiculture.html */
+
+main > section.section__part {
+  padding: 1.5rem;
+}
+
+main > section.section__part > h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main > section.section__part > div.equation {
+  display: flex;
+  justify-content: center;
+}
+
+main > section.section__part > div > p.equation {
+  color: red;
+  display: block;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+main > section.section__part > div.Order__list {
+  padding: 1rem;
+}
+
+main > section.description {
+  display: flex;
+  padding: 1rem;
+}
+
+main > section.description > div {
+  padding: 2rem;
 }
