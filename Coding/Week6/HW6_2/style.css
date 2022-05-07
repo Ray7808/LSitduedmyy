@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(235, 230, 230);
+  font-family: "Noto Sans TC", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+main {
+  display: flex;
+  height: 900px;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section.form__main {
+  width: 40%;
+  background-color: white;
+  height: 700px;
+  border-radius: 8px;
+}
+
+.form__main__top {
+  background-color: rgb(249, 201, 10);
+  width: 100%;
+  height: 10px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.form__title {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.form__title__desc {
+  padding-left: 2rem;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+footer > .footer__title {
+  font-size: 10px;
+}

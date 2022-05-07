@@ -163,7 +163,7 @@
 
 .comment {
   display: flex;
-  height: 500px;
+  height: 250px;
   justify-content: space-between;
 }
 
@@ -175,12 +175,30 @@
   margin: 30px;
   border: solid black 1px;
   border-radius: 8px;
+  width: 30%;
 }
 
 .item {
-  background: url("./p-1.png") center/cover no-repeat;
-  width: 30%;
-  height: 30%;
+  /* background: url("./p-1.png") center/cover no-repeat; */
+  width: 50%;
+  height: 50%;
+  position: relative;
+  z-index: 1;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item > img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment__desc {
+  padding: 20px;
 }
 
 .footer__top {
