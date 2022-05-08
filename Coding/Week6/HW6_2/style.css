@@ -5,6 +5,7 @@
   background-color: rgb(235, 230, 230);
   font-family: "Noto Sans TC", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -17,7 +18,7 @@ p {
 
 main {
   display: flex;
-  height: 900px;
+  height: 1300px;
   justify-content: center;
   align-items: center;
 }
@@ -25,7 +26,7 @@ main {
 main > section.form__main {
   width: 600px;
   background-color: white;
-  height: 800px;
+  height: 1150px;
   border-radius: 8px;
   box-shadow: 2px 2px 3px 3px rgb(169, 169, 169);
 }
@@ -69,6 +70,18 @@ main > section.form__main {
 .asking__title:after {
   content: " *";
   color: red;
+}
+
+.form__main > form {
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+.form__main > form > input {
+  background-color: white;
+  width: 250px;
+  border: 1px solid rgb(185, 185, 185);
+  padding: 0.2rem;
 }
 
 h3.asking__others {
