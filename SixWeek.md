@@ -594,8 +594,6 @@ https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
 
 之後等教 jQuery 再回去看金魚腦後續的部分。
 
-https://github.com/Lidemy/mentor-program-5th-oliver841025
-
 https://www.coderbridge.com/@oliver841025?utm_source=coderbridge-io&utm_medium=blog_author_info_author_name&utm_campaign=小小碼農_一些後端相關的名詞_@oliver841025
 
 https://hackmd.io/@benben6515
