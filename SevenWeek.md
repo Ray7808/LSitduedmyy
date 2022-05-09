@@ -51,9 +51,54 @@
 
 ---
 
+## 利用抓取到的標籤，使用 Javascript 進行修改
+
+剛剛提到使用`element`這個變數儲存了標籤或是 class，之後可以輸入
+
+> `element.style.background = "red";`
+
+即可將顏色變更為紅色。
+
+備註：假如想使用像是`padding-top`，但是中間的`-`會導致無法使用怎麼辦？
+這邊可以使用
+
+> `element.style['padding-top']='10px'`或是`element.style.paddingTop='10px'`
+
+就可以使用了！
+
+---
+
+## 利用抓取到的標籤，使用 Javascript 賦予與移除或是觸發 class 屬性
+
+- 賦予 class 屬性(add)
+  這邊上面可以先輸入
+
+  > `<style>.active{background:red}</style>`
+
+  然後在利用 Javascript 抓取完該標籤後，輸入
+
+  > `element.classList.add('active')`
+
+- 移除 class 屬性(remove)
+  要是想移除該 class 標籤的話，可以輸入
+
+  > `element.classList.remove('active')`
+
+  就可以移除該標籤了。
+
+- 觸發 class 屬性(toggle)
+
+  這是假如第一次使用這個，本來沒有該 class 的標籤，會賦予該 class 屬性，
+  但是再使用一次的話，則會移除該 class 屬性，反之亦然。
+  這邊可以輸入
+
+  > `element.classList.toggle('active')`
+
+---
+
 ## 目前看到這：
 
-https://lidemy.com/courses/390588/lectures/9653578
+https://lidemy.com/courses/390588/lectures/9653585
 
 下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview

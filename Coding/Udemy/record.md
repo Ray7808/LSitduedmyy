@@ -11,3 +11,7 @@
   假如想快速將 user snippet 建立好，
   可以找尋這個網站：`Snippet generator`，
   裡面有根據你的 IDE 快速建立對應 snuppet 的程式碼。
+
+- Unsplash 以及 Pexels
+  
+  這兩個網站裡面是各種免費的圖片，可以使用且不用註明來源
