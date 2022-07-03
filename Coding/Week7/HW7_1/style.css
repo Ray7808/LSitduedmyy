@@ -84,6 +84,15 @@ main > section.form__main {
   padding: 0.2rem;
 }
 
+.error,
+.error__radio {
+  padding: 0rem 1.5rem;
+  background-color: white;
+  color: red;
+  position: relative;
+  top: -10px;
+}
+
 h3.asking__others {
   font-size: 1.2rem;
   padding-left: 1.5rem;
@@ -114,7 +123,18 @@ form.Choose__one > label {
   padding-left: 1.5rem;
   background-color: white;
 }
+.input {
+  padding-left: 1.5rem;
+  background-color: white;
+}
 
+.form__main > .button > button {
+  padding: 0.5rem 2rem;
+  background-color: rgb(249, 214, 59);
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+}
 .form__main > .button > button {
   padding: 0.5rem 2rem;
   background-color: rgb(249, 214, 59);
