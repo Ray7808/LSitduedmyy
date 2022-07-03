@@ -94,11 +94,48 @@
 
   > `element.classList.toggle('active')`
 
+## 利用抓取到的標籤，使用 Javascript 賦予與移除內容
+
+- innerText(只有內容)、innerHTML(包含 HTML 語法)、outerHTML(連外層的內容都給你)
+
+- removeChild、appendChild
+
+  這邊是可以針對選擇到的東西直接去做新增或刪除的動作。
+  這邊在用`querySelector`時，要先選到想刪除或新增的 parent 是誰，才可以新增或刪除他的子元素。
+
+## AddEventListener / callbackfunction / error function
+
+## prevendDefault(可用在讓表單不要送出或阻止 user 輸入某些字)
+
+## 捕獲跟冒泡
+
+每次都有捕獲之後冒泡的階段，
+這邊可以使用 stopPropagation(阻止冒泡)，
+但是假如放在同一層的話，
+可以使用 stopImmediatePropagation()來立即阻止接續的捕獲(像是連接兩個 eventListener，但只想要觸發第一個)
+
+- Event delegation(事件代理)
+
+  用最底下有包住所有 element 的那個加入 EventListener，就可以再點選每個元素時都可以做使用。
+
+## Ajax
+
+原先 js 請求會經過瀏覽器，然後回傳的資料會直接 render 成一個新的頁面。
+Ajax 就是不 render 新頁面，js 可以直接拿到回傳的所有資料。
+
+利用`onload`這個方式。
+
+## 同源政策
+
+在瀏覽器不同網域的不能互相拿資料，除非在 header 有加入一些許可的資訊，
+或是像`img`或是其他來源的`js`才可以拿資料進去，
+或是在`js`裡面用先前學過的方式來創造資料也可以用物件的方式帶進去。
+
 ---
 
 ## 目前看到這：
 
-https://lidemy.com/courses/390588/lectures/9653585
+https://lidemy.com/courses/390588/lectures/9653982
 
 下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
