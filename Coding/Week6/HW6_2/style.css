@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(228, 228, 228, 0.862);
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+main {
+  display: flex;
+  height: 1300px;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section.form__main {
+  width: 650px;
+  background-color: white;
+  height: 1150px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 3px rgb(169, 169, 169);
+}
+
+.form__main__top {
+  background-color: rgb(249, 201, 10);
+  width: 100%;
+  height: 10px;
+  border-radius: 8px 8px 0px 0px;
+}
+.space {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
+
+.form__title {
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.form__title__desc {
+  padding-left: 1.5rem;
+  background-color: white;
+}
+
+.Important {
+  color: red;
+  padding-left: 1.5rem;
+  background-color: white;
+}
+
+.asking__title {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  background-color: white;
+}
+
+.asking__title:after {
+  content: " *";
+  color: red;
+}
+
+.form__main > form {
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+.form__main > form > input {
+  background-color: white;
+  width: 250px;
+  border: 1px solid rgb(185, 185, 185);
+  padding: 0.2rem;
+}
+
+h3.asking__others {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  background-color: white;
+}
+
+h3.asking__others > p {
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+form.Choose__one > input {
+  width: 25px;
+}
+
+form.Choose__one > label {
+  background-color: white;
+  font-size: 1rem;
+}
+
+.spacev2 {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+}
+
+.button {
+  padding-left: 1.5rem;
+  background-color: white;
+}
+
+.form__main > .button > button {
+  padding: 0.5rem 2rem;
+  background-color: rgb(249, 214, 59);
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+}
+
+.form__main > p {
+  background-color: white;
+  padding: 1.5rem;
+}
+footer {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+footer > .footer__title {
+  font-size: 10px;
+  background-color: black;
+}
