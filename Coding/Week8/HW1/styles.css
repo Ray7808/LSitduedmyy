@@ -1,0 +1,224 @@
+* {
+  font-family: Questrial, sans-serif;
+}
+.navbar .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+}
+
+.wrapper {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.navbar__SiteName {
+  font-size: 36px;
+  color: #489846;
+}
+
+.navbar__list {
+  display: flex;
+  padding: 20px;
+  margin-right: 50px;
+  list-style: none;
+}
+
+.navbar__list > li {
+  margin-left: 30px;
+  transition: all 0.4s;
+  border-radius: 8px;
+}
+
+.navbar__list > li > a {
+  font-size: 18px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 12px;
+  transition: all 0.4s;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+}
+
+.navbar__list > li .active {
+  background: rgb(248, 126, 146);
+  color: white;
+}
+
+.navbar__list > li > a:hover {
+  background: rgb(248, 126, 146);
+  color: white;
+}
+
+.Image__related {
+  height: 520px;
+}
+
+.Image__background {
+  background: url("./games-bn@3x.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_v1 {
+  background: url("./flight-g216c62e2f_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_v2 {
+  background: url("./living-room-gb4fd5b07e_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_v3 {
+  background: url("./youtube-gd2e8ff75a_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_vnone {
+  background-color: black;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Image__background__black {
+  background: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Image__background_vnone > .Image__background__black > h2 {
+  color: white;
+}
+
+.Image__price {
+  background-color: white;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Image__price > h2 {
+  font-size: 1.2rem;
+  color: rgb(71, 195, 125);
+  padding: 0rem 1rem;
+  margin-bottom: 0;
+}
+.Image__price ul {
+  margin-top: 0;
+  width: 90%;
+  display: block;
+  padding: 0;
+}
+.Image__price ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid rgb(71, 195, 125);
+}
+.Image__price ul li div {
+  padding: 1rem;
+}
+.Image__price ul li p {
+  width: 70%;
+}
+
+.Image__background__black {
+  display: flex;
+  flex-direction: column;
+}
+.Image__background__black h3 {
+  font-size: 2rem;
+}
+.price__submit {
+  display: block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 1rem;
+  background-color: red;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.price__again {
+  display: block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 1rem;
+  background-color: red;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  background-color: rgb(220, 246, 193);
+}
+
+.footer__left {
+  padding: 10px;
+}
+
+.footer__left > div {
+  padding: 5px;
+}
+
+.footer__right {
+  padding: 10px;
+}
+
+.footer__right__label {
+  font-size: 36px;
+  color: #489846;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #365e2b;
+  color: white;
+}
+
+@media (max-width: 910px) {
+  .navbar .wrapper {
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  .navbar__list {
+    display: flex;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar__list li {
+    text-align: center;
+    border-radius: 0;
+    margin-left: 0;
+    justify-content: center;
+    width: 25%;
+  }
+}
