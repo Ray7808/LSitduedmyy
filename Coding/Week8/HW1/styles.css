@@ -65,6 +65,34 @@
   align-items: center;
   display: flex;
 }
+.Image__background_v1 {
+  background: url("./flight-g216c62e2f_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_v2 {
+  background: url("./living-room-gb4fd5b07e_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_v3 {
+  background: url("./youtube-gd2e8ff75a_1920.jpg") center/cover no-repeat;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Image__background_vnone {
+  background-color: black;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
 .Image__background__black {
   background: rgba(255, 255, 255, 0.1);
@@ -73,6 +101,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.Image__background_vnone > .Image__background__black > h2 {
+  color: white;
 }
 
 .Image__price {
@@ -110,7 +141,25 @@
 .Image__price ul li p {
   width: 70%;
 }
-.Image__price button {
+
+.Image__background__black {
+  display: flex;
+  flex-direction: column;
+}
+.Image__background__black h3 {
+  font-size: 2rem;
+}
+.price__submit {
+  display: block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 1rem;
+  background-color: red;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.price__again {
+  display: block;
   padding: 0.8rem 2.5rem;
   border-radius: 1rem;
   background-color: red;
