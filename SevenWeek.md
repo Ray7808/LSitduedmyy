@@ -167,7 +167,8 @@ git commit -am "7/4__AJAXOAO"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
-git push -u origin main
+git push -u origin master2
+
 
 vscode 開啟 terminal：control + ~(左上角)
 
