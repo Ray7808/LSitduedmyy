@@ -163,12 +163,13 @@ https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
 
 # git commit
 
-git commit -am "7/4__AJAXOAO"
+= =
+
+git commit -am "7/4\_\_AJAXOAO"
 
 git branch -M main
 git remote add origin https://github.com/Ray7808/LSitduedmyy.git
 git push -u origin master2
-
 
 vscode 開啟 terminal：control + ~(左上角)
 
