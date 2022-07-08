@@ -182,11 +182,19 @@ request => apache => php => output(這邊是 html) => apache => response
 這邊可以進行路徑的修改，
 這樣就不會只能在原先那邊做使用。
 
+而 windows 的預設是
+
+> C:\xampp\htdocs
+
+---
+
+# phpadmin
+
 ---
 
 ## 目前看到這：
 
-https://lidemy.com/courses/390588/lectures/9653982
+https://lidemy.com/courses/390611/lectures/8553736
 
 下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
