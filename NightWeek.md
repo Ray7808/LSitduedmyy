@@ -395,6 +395,122 @@ request => apache => php => output(這邊是 html) => apache => response
   ```
 
   之後若要修改程式碼只要去`ConnectMySQL.php`裡面進行修改就好。
+  另外記得因為這支 php 裡面有包含密碼，因此不要推上 github，不然會有點麻煩。
+
+---
+
+- # php 從資料庫讀取資料
+
+  這個部分是從`ReadDataInMySQL.php`開始
+
+  這邊是先從資料庫讀取現在時間:
+
+  ```
+  <?php
+    // 這邊是可以顯示現在的時間
+    require_once('ConnectMySQL.php');
+    $result = $conn->query("SELECT now();");
+    if (!$result) {
+        die($conn->error);
+    }
+    $row = $result->fetch_assoc();
+    echo "Now is " . $row['now()'];
+  ?>
+  ```
+
+  而這個則是從資料庫讀取資料:
+
+  ```
+  <?php
+   //這邊可以進行資料的讀取
+    require_once('ConnectMySQL.php');
+    $result = $conn->query("SELECT * FROM users");
+    if (!$result) {
+        die($conn->error);
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        echo "id:" . $row['id'] . '<br>';
+        echo "username:" . $row['username'] . '<br>';
+    }
+  ?>
+  ```
+
+  要注意的是，若要進行資料庫的讀取，可以先用`phpMyAdmin`新增資料後，再進行確認。
+
+---
+
+- # php 從資料庫讀取資料
+
+  這邊可以看`InsertDataInMySQL.php`跟`TestInsertData.php`，
+  以下是他們的程式碼:
+
+  程式說明:
+  透過`InsertDataInMySQL.php`得到 POST 回傳的表單，之後搭配 SQL 語法將之加入資料庫，然後使用`header`回到`TestInsertData.php`的頁面。
+  而`TestInsertData.php`則是除了利用`while`將資料庫裡的`username`跟`id`顯示出來外，也加入一個表單(POST method)用來將資料輸入傳到`InsertDataInMySQL.php`進行寫入資料庫的動作。
+
+  `InsertDataInMySQL.php`的程式碼:
+
+  ```
+  <?php
+    //測試能否將apple加入到MySQL裡面
+    // require_once('ConnectMySQL.php');
+    // $result = $conn ->query("insert into users(username) values('Body')");
+    // if(!$result){
+    //     die($conn->error);
+    // }
+    // print_r($result); //輸出1，代表有成功的意思
+
+    //新增資料
+    require_once('ConnectMySQL.php');
+     if (empty($_POST['username'])) {
+        die('請輸入 username');
+     }
+
+     $username = $_POST['username'];
+     $sql = sprintf(
+       "insert into users(username) values('%s')",
+        $username
+     );
+     $result = $conn->query($sql);
+      if (!$result) {
+       die($conn->error);
+     }
+     echo "新增成功!" . "<br>";
+     echo "username: " . $_POST['username'] . "<br>";
+
+     //以下這個header是回到原本頁面的意思
+     header("Location: TestInsertData.php");
+  ?>
+  ```
+
+`TestInsertData.php`的程式碼:
+
+```
+
+  <?php
+    //這邊可以進行資料的讀取
+    require_once('ConnectMySQL.php');
+    //$result = $conn->query("SELECT * FROM users");
+    //下面這個是他會按照這個id大小去排序的意思
+    //分別有ASC(小到大)跟DESC(大到小)
+    $result = $conn->query("SELECT * FROM users order by id DESC;");
+    if (!$result) {
+        die($conn->error);
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        echo "id:" . $row['id'] . '<br>';
+        echo "username:" . $row['username'] . '<br>';
+    }
+  ?>
+
+  <h2>新增資料:</h2>
+  <form method="POST" action="InsertDataInMySQL.php">
+    username: <input name="username" />
+    <input type="submit"/>
+  </form>
+```
 
 ---
 
