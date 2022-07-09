@@ -58,3 +58,29 @@ echo "<h1>AAA</h1>"
 	}
 	echo add(3,5);
 ?>
+
+<!-- 單純抓取網站參數 -->
+<!-- <?php
+	echo "Hello!";
+	print_r($_GET);
+?> -->
+
+<!-- 抓取網站參數並經過處理再輸出 -->
+<!-- <?php
+	echo "Hello! <br>";
+	echo "a: " . $_GET['a'] . "<br>";
+	echo "b: " . $_GET['b'] . "<br>";
+	print_r($_GET);
+?> -->
+
+<!-- 使用if來避免沒有網站參數的情形 -->
+<!-- <?php
+	echo "Hello! <br>";
+	if (isset($_GET['a'])){
+		echo "a: " . $_GET['a'] . "<br>";
+	}
+	if (isset($_GET['b'])){
+		echo "b: " . $_GET['b'] . "<br>";
+	}
+	print_r($_GET);
+?> -->

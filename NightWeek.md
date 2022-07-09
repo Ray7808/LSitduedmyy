@@ -190,6 +190,170 @@ request => apache => php => output(這邊是 html) => apache => response
 
 # phpadmin
 
+可以使用這個進行資料庫的撰寫。
+
+---
+
+# php 帶資料進來
+
+假如開啟 server 然後在網址的 php 後面輸入字串，
+可以利用 php 的內建函式抓取出來，例如:
+
+> http://localhost/YuWang/index.php?a=1&b=2
+
+上面的`?a=1&b=2`就是輸入給 php 的字串，
+這時在 php 檔案裡可以寫:
+
+> print_r($\_GET);
+
+就可以得到該輸入的字串，下方式網頁輸出結果:
+![image](Coding\Week9\Lidemy_week9\phpObtainInformationFromAddress.PNG)
+
+但是這邊還是單純輸出字串，
+這時假如只想使用輸入的參數，
+可以這樣寫:
+
+```
+<?php
+	echo "Hello! <br>";
+	echo "a: " . $_GET['a'] . "<br>";
+	echo "b: " . $_GET['b'] . "<br>";
+	print_r($_GET);
+?>
+```
+
+這樣就可以根據傳回的資料稍加處理後再輸出出去。
+
+但因為有時我們並沒有輸入參數，
+而這樣會導致 php 無法辨識而產生 error(如下圖)
+![image](Coding\Week9\Lidemy_week9\NoInputAndError.PNG)
+
+因此要使用一個 if funciton(`isset`)
+
+```
+<?php
+	echo "Hello! <br>";
+	if (isset($_GET['a'])){
+		echo "a: " . $_GET['a'] . "<br>";
+	}
+	if (isset($_GET['b'])){
+		echo "b: " . $_GET['b'] . "<br>";
+	}
+	print_r($_GET);
+?>
+```
+
+---
+
+# 從前端傳資料給後端 (GET and POST)
+
+- ## GET method
+
+  一般來說，前端會使用`form`進行表單資料的傳遞，例如在`getDataUsingGETMethod.php`以及`DataBase.php`中:
+
+  程式描述:
+  位於`getDataUsingGETMethod.php`的 form 表單會回傳 a 跟 age 的資料給`DataBase.php`這隻程式碼，之後`DataBase.php`會整理並輸出頁面給使用者查看輸入的資料。
+
+  `getDataUsingGETMethod.php` 的程式碼:
+
+  ```
+  <?php
+    echo "I am YuWang! Yo!"
+  ?>
+
+  <form method="GET" action="DataBase.php">
+    a: <input name="a" />
+    age: <input name="age">
+    <input type="submit"/>
+  </form>
+  ```
+
+  `DataBase.php` 的程式碼:
+
+  ```
+  <?php
+    echo "Hello! <br>";
+    if (isset($_GET['a'])){
+      echo "a: " . $_GET['a'] . "<br>";
+    }
+    if (isset($_GET['age'])){
+      echo "age: " . $_GET['age'] . "<br>";
+    }
+    print_r($_GET);
+  ?>
+  ```
+
+  透過這樣的方式，就可以處理前端回傳的資料並進行處理。另外若想針對沒有資料回傳的情況進行 error handling 時，可以在`DataBase.php`這樣寫:
+
+  ```
+  <!-- 假如form資料有缺的error handling -->
+  <?php
+    echo "Hello! <br>";
+    if(!isset($_GET['a']) || !isset($_GET['age'])){
+      echo "資料有缺，請再次填寫<br>";
+      exit();
+    }
+    else{
+      echo "Hello! Your name is " . $_GET['a'] . "<br>";
+      echo "Your age is " . $_GET['age'] . "<br>";
+    }
+
+    print_r($_GET);
+  ?>
+  ```
+
+  這邊的`exit();`是表示當執行完上述程式，之後的程式就不再執行的意思，像是假如沒有寫 else 的話，就可以使用剛剛那個方式來停止後續程式的執行。
+  只是要小心如果有後續的撰寫的話，他還是會包進去。
+
+- ## POST method
+
+  相比於上述的`GET method`，`POST method`在後續的網址的處理上，就不會顯示輸入的內容，相較之下比較具有安全性，
+
+  這邊除了使用上述的`DataBase.php`(需要針對`POST method`進行對應的撰寫)之外，我們使用另外一個`getDataUsingPOSTMethod.php`，這樣在回傳表單時，就不會帶入輸入的個個資料:
+
+  `getDataUsingGETMethod.php` 的程式碼:
+
+  ```
+  <?php
+  	echo "I am YuWang! Yo!"
+  ?>
+
+
+  <form method="POST" action="DataBase.php">
+    a: <input name="a" />
+  	age: <input name="age">
+    <input type="submit"/>
+  </form>
+  ```
+
+  `DataBase.php` 的程式碼:
+
+  ```
+  <!-- 這邊使用POST method進行撰寫 -->
+  <?php
+  	echo "Hello! <br>";
+  	if(empty($_POST['a']) || empty($_POST['age'])){
+  		echo "資料有缺，請再次填寫<br>";
+  		exit();
+  	}
+  	else{
+  		echo "Hello! Your name is " . $_POST['a'] . "<br>";
+  		echo "Your age is " . $_POST['age'] . "<br>";
+  	}
+
+  	print_r($_POST);
+  ?>
+  ```
+
+  這邊要注意的是我們有使用`empty`這個函式，主要是當`form`回傳的資料室空的時候，就輸出資料有缺的資訊。
+
+  另外`GET`跟`POST`原則上不能混用，因為當表單送出就會直接定義它的型態，但是假如你原本用POST然後在action的路徑後面加入`?(後面輸入GET形式的資料型態)`，例如:
+  ```
+  action="DataBase.php?school=blablabla"
+  ```
+
+  這樣還是可以將此筆資料傳入後續的檔案裏面。
+
 ---
 
 ## 目前看到這：
