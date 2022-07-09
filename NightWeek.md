@@ -347,12 +347,53 @@ request => apache => php => output(這邊是 html) => apache => response
 
   這邊要注意的是我們有使用`empty`這個函式，主要是當`form`回傳的資料室空的時候，就輸出資料有缺的資訊。
 
-  另外`GET`跟`POST`原則上不能混用，因為當表單送出就會直接定義它的型態，但是假如你原本用POST然後在action的路徑後面加入`?(後面輸入GET形式的資料型態)`，例如:
+  另外`GET`跟`POST`原則上不能混用，因為當表單送出就會直接定義它的型態，但是假如你原本用 POST 然後在 action 的路徑後面加入`?(後面輸入GET形式的資料型態)`，例如:
+
   ```
   action="DataBase.php?school=blablabla"
   ```
 
   這樣還是可以將此筆資料傳入後續的檔案裏面。
+
+- ## 連接 MySQL
+
+  這邊可以利用 phpMyAdmin 使用創建使用者帳號
+  ![image](Coding\Week9\Lidemy_week9\AddUserAccount.PNG)
+
+  ![image](Coding\Week9\Lidemy_week9\NewUserAccount.PNG)
+
+  之後可以直接去看`ConnectMySQL.php`的程式碼:
+
+  ```
+  <?php
+    echo "Now you are entering the SQL...";
+    $server_name = 'localhost';
+    $username = 'YuWang';
+    $password = '1234';
+    $db_name = 'YuWang';
+
+    $conn = new mysqli($server_name, $username, $password, $db_name);
+
+    if ($conn->connect_error) {
+      die('資料庫連線錯誤:' . $conn->connect_error);
+      // 這個die是執行完這段後，底下的都不會執行。
+    }
+
+    $conn->query('SET NAMES UTF8');
+    $conn->query('SET time_zone = "+8:00"');
+  ?>
+  ```
+
+  ### <mark>引用不同 php 檔案的方式</mark>
+
+  這邊要提到的是，通常 php 裡面，
+  不同功能會分開寫在不同的 php 檔案，
+  因此連線的部分會寫在`ConnectMySQL.php`或`conn.php`裡面，之後在`DataBase.php`裡面進行引用，輸入:
+
+  ```
+  require_once('ConnectMySQL.php');
+  ```
+  之後若要修改程式碼只要去`ConnectMySQL.php`裡面進行修改就好。
 
 ---
 
@@ -403,3 +444,7 @@ vscode 開啟 markdown(md 檔)：command + shift + v
 開啟 Google Chrome 的 Devtool 快捷鍵 : command + option + i
 
 OAO
+
+```
+
+```
