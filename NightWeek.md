@@ -38,7 +38,7 @@ wefowfow
 ```
 
 以上這些都是不行的，
-需要加入<?php (欲輸入的內容) ?>－才行，例如：
+需要加入`<?php (欲輸入的內容) ?>`－才行，例如：
 
 ```
 <?php
@@ -94,13 +94,13 @@ echo 124
 
       ```
       <?php
-      $score=60;
-      if($score >= 60){
-      	echo "Pass";
-      }
-      else{
-      	echo "Fail";
-      }
+        $score=60;
+        if($score >= 60){
+         	echo "Pass";
+        }
+        else{
+      	  echo "Fail";
+        }
       ?>
       ```
 
@@ -345,7 +345,7 @@ request => apache => php => output(這邊是 html) => apache => response
   ?>
   ```
 
-  這邊要注意的是我們有使用`empty`這個函式，主要是當`form`回傳的資料室空的時候，就輸出資料有缺的資訊。
+  這邊要注意的是我們有使用`empty`這個函式，主要是當`form`回傳的資料是空的時候，就輸出資料有缺的資訊。
 
   另外`GET`跟`POST`原則上不能混用，因為當表單送出就會直接定義它的型態，但是假如你原本用 POST 然後在 action 的路徑後面加入`?(後面輸入GET形式的資料型態)`，例如:
 
@@ -362,15 +362,17 @@ request => apache => php => output(這邊是 html) => apache => response
 
   ![image](Coding\Week9\Lidemy_week9\NewUserAccount.PNG)
 
+  這編稍微要注意的是主機名稱要設定成`localhost`或其他記得的名稱。(Mac 是設定成 localhost)
+
   之後可以直接去看`ConnectMySQL.php`的程式碼:
 
   ```
   <?php
     echo "Now you are entering the SQL...";
     $server_name = 'localhost';
-    $username = 'YuWang';
-    $password = '1234';
-    $db_name = 'YuWang';
+    $username = 'HEHEHE';
+    $password = 'HEHEHE';
+    $db_name = 'HEHEHE';
 
     $conn = new mysqli($server_name, $username, $password, $db_name);
 
@@ -511,6 +513,109 @@ request => apache => php => output(這邊是 html) => apache => response
     <input type="submit"/>
   </form>
 ```
+
+- # php 從資料庫刪除資料
+
+  這邊是刪除資料，透過`TestInsertAndDeleteData.php`新增一個刪除的按鈕，但是裡面是刪除資料的網址後面加入`?id=(欲刪除的id名稱)`，這樣使用`GET method`就可以將網址帶入刪除的資訊並進行刪除，若要使用`POST method`則要帶整個`form`進去，會比較麻煩。
+
+  以下是刪除資料的流程說明：
+  `TestInsertAndDeleteData.php`跟之前`TestInsertData.php`幾乎一樣，只是每個欄位後面加入 a 標籤，並在`href`後面帶入要刪除的 id 連結，之後在`delete.php`利用`GET method`輸入 id，再代入 SQL 語法來將該筆資料刪除，後續再導回到原先的`TestInsertAndDeleteData.php`。另外要注意的是因為這個之前有連接`InsertDataInMySQL.php`而這邊則是導入`InsertDataInMySQLButRedirectToDeletePages.php`。
+
+  `TestInsertAndDeleteData.php`的程式碼：
+
+  ```
+  <?php
+    //這邊可以進行資料的讀取
+    require_once('ConnectMySQL.php');
+    //$result = $conn->query("SELECT * FROM users");
+    //下面這個是他會按照這個id大小去排序的意思
+    $result = $conn->query("SELECT * FROM users order by id;");
+    if (!$result) {
+        die($conn->error);
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        echo "id:" . $row['id'];
+        echo "<a href='delete.php?id=" . $row['id'] . "'>刪除</a>";
+        echo "<br>";
+        echo "username:" . $row['username'] . '<br>';
+    }
+  ?>
+
+
+  <h2>新增資料:</h2>
+  <form method="POST"     action="InsertDataInMySQLButRedirectToDeletePages.php">
+  username: <input name="username" />
+    <input type="submit"/>
+  </form>
+  ```
+
+  `delete.php`的程式碼：
+
+  ```
+  <?php
+  require_once('ConnectMySQL.php');
+
+  if (empty($_GET['id'])) {
+    die('請輸入 id');
+  }
+
+  $id = $_GET['id'];
+  $sql = sprintf(
+    "delete from users where id = %d",
+    $id
+  );
+  echo $sql . '<br>';
+  $result = $conn->query($sql);
+  if (!$result) {
+    die($conn->error);
+  }
+
+  //這邊是當被影響的列數大於1時，表示有刪除成功
+  if ($conn->affected_rows >= 1) {
+    echo '刪除成功';
+  } else {
+    echo '查無資料';
+  }
+
+  header("Location: TestInsertAndDeleteData.php");
+  ?>
+  ```
+
+  `InsertDataInMySQLButRedirectToDeletePages.php`的程式碼：
+
+  ```
+  <?php
+    //新增資料
+    require_once('ConnectMySQL.php');
+     if (empty($_POST['username'])) {
+        die('請輸入 username');
+     }
+
+     $username = $_POST['username'];
+     $sql = sprintf(
+       "insert into users(username) values('%s')",
+        $username
+     );
+     $result = $conn->query($sql);
+      if (!$result) {
+       die($conn->error);
+     }
+     echo "新增成功!" . "<br>";
+     echo "username: " . $_POST['username'] . "<br>";
+
+     //以下這個header是回到原本頁面的意思
+     header("Location: TestInsertAndDeleteData.php");
+  ?>
+  ```
+
+這邊要注意的是，當輸入 id ＝(未使用的數字)，
+並且刪除成功時，不代表有刪除任何資料，
+只有當指令輸入錯誤時才會跳 error。
+
+---
+
+- # php 從資料庫更新資料
 
 ---
 
