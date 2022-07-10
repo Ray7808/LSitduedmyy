@@ -621,7 +621,7 @@ request => apache => php => output(這邊是 html) => apache => response
 
 ## 目前看到這：
 
-https://lidemy.com/courses/390611/lectures/16659561
+https://lidemy.com/courses/390611/lectures/16659553
 
 下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
