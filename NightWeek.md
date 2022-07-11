@@ -617,11 +617,76 @@ request => apache => php => output(這邊是 html) => apache => response
 
 - # php 從資料庫更新資料
 
+  這邊跟前面的刪除資料類似，只是透過輸入`id`跟`username`來進行更新編輯資料的部分，這邊可以先看到`TestInsertAndDeleteAndEditData.php`裡面新增一個專門編輯的`form`，而透過`form`傳遞到`update.php`來進行資料的更新再導回到`TestInsertAndDeleteAndEditData.php`裡面。
+
+  `TestInsertAndDeleteAndEditData.php`的程式碼：
+
+  ```
+  <?php
+    //這邊可以進行資料的讀取
+    require_once('ConnectMySQL.php');
+    //$result = $conn->query("SELECT * FROM users");
+    //下面這個是他會按照這個id大小去排序的意思
+    $result = $conn->query("SELECT * FROM users order by id;");
+    if (!$result) {
+        die($conn->error);
+    }
+
+    while ($row = $result->fetch_assoc()) {
+        echo "id:" . $row['id'];
+        echo "<a href='delete.php?id=" . $row['id'] . "'>刪除</a>";
+        echo "<br>";
+        echo "username:" . $row['username'] . '<br>';
+    }
+  ?>
+  <h2>新增資料:</h2>
+  <form method="POST" action="InsertDataInMySQLButRedirectToDeletePages.php">
+    username: <input name="username" />
+    <input type="submit"/>
+  </form>
+  <h2>編輯資料:</h2>
+  <form method="POST" action="update.php">
+      ID: <input name="id" />
+    username: <input name="username" />
+    <input type="submit"/>
+  </form>
+  ```
+
+  `update.php`的程式碼：
+
+  ```
+  <?php
+  require_once('ConnectMySQL.php');
+
+  if (empty($_POST['id']) || empty($_POST['username'])) {
+    die('請輸入 id 與 username');
+  }
+
+  $id = $_POST['id'];
+  $username = $_POST['username'];
+  $sql = sprintf(
+    "update users set username='%s' where id=%d",
+    $username,
+    $id
+  );
+  echo $sql . '<br>';
+  $result = $conn->query($sql);
+  if (!$result) {
+    die($conn->error);
+  }
+
+  header("Location: TestInsertAndDeleteAndEditData.php");
+  ?>
+  ```
+
 ---
 
 ## 目前看到這：
 
-https://lidemy.com/courses/390611/lectures/16659553
+https://lidemy.com/courses/390611/lectures/16734488
+
+github 的 Lidemy 5th:
+https://github.com/Lidemy/mentor-program-5th
 
 下週可以回到 udemy 看最後的部分
 https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
