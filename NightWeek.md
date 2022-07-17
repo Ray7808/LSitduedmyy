@@ -694,13 +694,21 @@ request => apache => php => output(這邊是 html) => apache => response
 
    確定好有什麼功能後，就要規劃資料結構跟建構資料庫
 
-瞭解一下 css 的 word-break(可以解決跑板問題)跟 white-space(解決空白問題)
+3. css 的 word-break(可以解決跑板問題)跟 white-space(解決空白問題)
+
+4. XSS Cross-site Scripting
+
+   跨展在瀏覽器上執行 js 的部分。有時因為網頁要跟後端溝通，要是用 html 結合 js 語法傳進去後，輸出也會是 html + js 語法，這樣有時就可以利用這個特性來使用 js 帶一些訊息進去看能否破解這個網站。或是導到釣魚網站來偷取使用者的一些資訊，因此需要用一些手法來避免這個問題。(修補 XSS)
+
+5. SQL injection
+
+透過輸入特殊符號或是惡意構造的字串來讓資料庫誤以為是他們自己的使用者，使得其他使用者都可以登入這個網站，因此為了
 
 ---
 
 ## 目前看到這：
 
-https://lidemy.com/courses/390611/lectures/16660092
+https://lidemy.com/courses/390611/lectures/16776078
 
 github 的 Lidemy 5th:
 https://github.com/Lidemy/mentor-program-5th
