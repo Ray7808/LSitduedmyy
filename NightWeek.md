@@ -681,9 +681,26 @@ request => apache => php => output(這邊是 html) => apache => response
 
 ---
 
+# 留言板實作
+
+1. ## 規劃功能
+
+   這邊一開始要規劃要怎麼實行這個架構：
+
+   - index.php 觀看所有留言
+   - handle_add_post.php 新增留言
+
+2. ## 規劃資料結構跟資料庫
+
+   確定好有什麼功能後，就要規劃資料結構跟建構資料庫
+
+瞭解一下 css 的 word-break(可以解決跑板問題)跟 white-space(解決空白問題)
+
+---
+
 ## 目前看到這：
 
-https://lidemy.com/courses/390611/lectures/16734488
+https://lidemy.com/courses/390611/lectures/16660092
 
 github 的 Lidemy 5th:
 https://github.com/Lidemy/mentor-program-5th
