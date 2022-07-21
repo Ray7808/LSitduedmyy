@@ -696,82 +696,26 @@ request => apache => php => output(這邊是 html) => apache => response
 
 3. css 的 word-break(可以解決跑板問題)跟 white-space(解決空白問題)
 
-4. 明文密碼
+---
+
+# 後端相關觀念
+
+1. 明文密碼
 
    通常資料庫不會直接儲存使用者的密碼，因為駭客很有可能透過一些方式得到使用者的各個資訊，先前提到的 cookie 也可以被直接做修改傳回到 server 上。因此有像是`加密`或是
    `雜湊(hash)`這兩個方式來避免駭客直接得到密碼。`加密`這邊是透過一個演算法來得到加密後的密碼，但是這樣因為是一對一的關係，因此只要搞懂他的運作原理，很容易就被破解然後取得資訊，因此這邊通常用 `雜湊(hash)` 這個演算法，來隨機產生多對一的密碼(就是不同人的密碼可能得到同一個對應的字串)，這樣就可以避免駭客得到這個密碼，
 
    <mark> 因為加密可以解密，但是雜湊(hash)沒辦法還原。</mark>
 
-5. XSS Cross-site Scripting
+2. XSS Cross-site Scripting
 
    跨展在瀏覽器上執行 js 的部分。有時因為網頁要跟後端溝通，要是用 html 結合 js 語法傳進去後，輸出也會是 html + js 語法，這樣有時就可以利用這個特性來使用 js 帶一些訊息進去看能否破解這個網站。或是導到釣魚網站來偷取使用者的一些資訊，因此需要用一些手法來避免這個問題。(修補 XSS)
 
-6. SQL injection
+3. SQL injection
 
-透過輸入特殊符號或是惡意構造的字串來讓資料庫誤以為是他們自己的使用者，使得其他使用者都可以登入這個網站，因此為了避免這個問題，MySQL 有用一些方式像是`Prepared statement`來重新拼些輸入的參數，這樣就可以避免惡意輸入的變數改到資料庫的內容或是被拿取資料。
+   透過輸入特殊符號或是惡意構造的字串來讓資料庫誤以為是他們自己的使用者，使得其他使用者都可以登入這個網站，因此為了避免這個問題，MySQL 有用一些方式像是`Prepared statement`來重新拼些輸入的參數，這樣就可以避免惡意輸入的變數改到資料庫的內容或是被拿取資料。
 
----
-
-## 目前看到這：
-
-之後先看這兩個連結：
-
-https://medium.com/@brad61517/資訊安全-密碼存明碼-怎麼不直接去裸奔算了-淺談-hash-用雜湊保護密碼-d561ad2a7d84
-
-https://medium.com/starbugs/what-are-encoding-encrypt-and-hashing-4b03d40e7b0c
-
-跟第九週的補充資料
-
-https://lidemy.com/courses/390611/lectures/16660709
-
-github 的 Lidemy 5th:
-https://github.com/Lidemy/mentor-program-5th
-
-下週可以回到 udemy 看最後的部分
-https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
-
-之後等教 jQuery 再回去看金魚腦後續的部分。
-
-https://www.coderbridge.com/@oliver841025?utm_source=coderbridge-io&utm_medium=blog_author_info_author_name&utm_campaign=小小碼農_一些後端相關的名詞_@oliver841025
-
-https://hackmd.io/@benben6515
-
-https://www.evernote.com/shard/s358/client/snv?noteGuid=cb7acfa7-1450-377d-efe3-831387b100fe&noteKey=8e365929e4b9dfb2554d26355b672e04&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs358%2Fsh%2Fcb7acfa7-1450-377d-efe3-831387b100fe%2F8e365929e4b9dfb2554d26355b672e04
-
-還沒看：
-
-導師計畫第一期：
-https://lidemy.com/courses/enrolled/378582
-
-沒在用：
-https://github.com/ClayGao/My-study/tree/master/Lidemy/week1-4/week1-3
-
-等這一切結束，記得把每週要知道的部分再重新整理在這裡。
-以及可以再來玩 HTTPGame 後續的部分
+4. 資料庫正規化
 
 ---
 
-# git commit
-
-OK
-
-git commit -am "7/4\_\_AJAXOAO"
-
-git branch -M main
-git remote add origin https://github.com/Ray7808/LSitduedmyy.git
-git push -u origin main
-
-vscode 開啟 terminal：control + ~(左上角)
-
-vscode 開啟 markdown(md 檔)：command + shift + v
-
-查看隱藏資料夾快捷鍵：Command + shift + .
-
-開啟 Google Chrome 的 Devtool 快捷鍵 : command + option + i
-
-OAO
-
-```
-
-```
