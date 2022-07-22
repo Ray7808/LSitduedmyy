@@ -17,7 +17,10 @@
 
 # CSS 預處理器
 
-SCSS 介紹。
+SCSS 介紹像是巢狀結構或是參數化的部分(前面加＄)，
+
+要是想用 hover 等等的參數的話，可以在裡面用`&:hover`指向自己。
+要是原先 class 是`OAO`然後裡面有`OAO__title`，可以使用`&__title`一樣可以指到裡面的部分。
 
 ---
 
@@ -31,7 +34,7 @@ https://medium.com/starbugs/what-are-encoding-encrypt-and-hashing-4b03d40e7b0c
 
 跟第九週的補充資料
 
-https://lidemy.com/courses/390624/lectures/23282521
+https://lidemy.com/courses/390624/lectures/24800326
 
 可以在 terminal 使用 vimtuber
 
