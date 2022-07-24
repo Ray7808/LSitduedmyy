@@ -64,13 +64,7 @@ Javascript 的 compiler，可以將 ES6 的語法轉換回 ES5 或是更前面�
 
 ## 目前看到這：
 
-之後先看這兩個連結：
-
-https://medium.com/@brad61517/資訊安全-密碼存明碼-怎麼不直接去裸奔算了-淺談-hash-用雜湊保護密碼-d561ad2a7d84
-
-https://medium.com/starbugs/what-are-encoding-encrypt-and-hashing-4b03d40e7b0c
-
-跟第九週的補充資料
+可以等都大概看完後再回來看fetch的介紹跟第十四週後面的系統架構
 
 https://lidemy.com/courses/390624/lectures/23381365
 
@@ -80,9 +74,6 @@ https://lidemy.com/courses/390624/lectures/23381365
 
 github 的 Lidemy 5th:
 https://github.com/Lidemy/mentor-program-5th
-
-下週可以回到 udemy 看最後的部分
-https://www.udemy.com/course/chrome-devtools/learn/lecture/5402028#overview
 
 之後等教 jQuery 再回去看金魚腦後續的部分。
 
