@@ -2,6 +2,7 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "mysql": "^2.18.1",
     "repeat-string": "^1.6.1",
     "request": "^2.88.2"
   },
