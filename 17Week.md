@@ -7,6 +7,8 @@
 
 這邊可以使用 `body-parser` 拿到表單資料(在`express_index.js`裡面)。
 這樣就可以透過定義 req.body.<form 輸入的 name>
+`ORM(Object Relational Mapping)`是一個物件，只要操作這個物件，就可以針對資料庫去進行變化，這樣就不用再額外處理 SQL query 的部分。
+`N+1 problem`是 N 次迴圈中，每次迭代都呼叫資料庫，因而拖慢速度
 
 `expression-session`則是可以用來處理 session 相關的部分。
 `connect-flash`也可以用來處理 session 相關的部分
@@ -14,6 +16,7 @@
 `PM2`是一個可以一直在背景執行的 npm 軟體。假如想部署就可以使用這個，這樣就可以一直跑這個服務。
 `gandi`是一款可以讓你自己搭載網域的網站，這樣就可以利用這個服務讓你的網站可以跟外界溝通。純粹建部落格的話，可以使用 githube page + hexo 就可以了。
 `Nginx`是一種可以提供反向代理的套件，藉由 user 都透過同一個網址(port)輸入進來，再由那個服務決定是從哪裡來的，然後再轉連到不同的服務(port)上。
+`clearDB`是 heroku 一個免費的套件，可以稍微存取資料庫來做使用。
 
 - cp : 複製檔案的指令
 
