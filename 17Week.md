@@ -26,7 +26,7 @@
 
 可以等都大概看完後再回來看 fetch 的介紹跟第十四週後面的系統架構
 
-https://lidemy.com/courses/390625/lectures/11184666
+https://lidemy.com/courses/1152506/lectures/24761115
 
 可以在 terminal 使用 vimtuber
 
