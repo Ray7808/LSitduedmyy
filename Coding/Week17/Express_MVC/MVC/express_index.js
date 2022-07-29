@@ -1,3 +1,4 @@
+const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const port = 5001;
@@ -18,13 +19,16 @@ app.use((req, res, next) => {
 //if we add "?admin=1" on the end of the website address
 // then we can go through this middleware
 // This part can also use function and add into the app.get parameters
-app.use((req, res, next) => {
-  if (req.query.admin === "1") {
-    next();
-  } else {
-    res.end("Err");
-  }
-});
+// app.use((req, res, next) => {
+//   if (req.query.admin === "1") {
+//     next();
+//   } else {
+//     res.end("Err");
+//   }
+// });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json);
 
 app.get("/", (req, res) => {
   res.render("hello.ejs");
