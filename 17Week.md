@@ -29,7 +29,7 @@ useLayoutEffect：render 前你想做什麼(可以先 import from react)
 
 可以等都大概看完後再回來看 fetch 的介紹跟第十四週後面的系統架構
 
-https://lidemy.com/courses/1181039/lectures/25643184
+https://lidemy.com/courses/1181039/lectures/25643186
 
 可以在 terminal 使用 vimtuber
 
