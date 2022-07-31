@@ -21,7 +21,20 @@
 - cp : 複製檔案的指令
 
 useEffect：render 後你想做什麼(可以先 import from react)
+
 useLayoutEffect：render 前你想做什麼(可以先 import from react)
+
+memo/useCallback : 避免 parent 改動時影響到 children 然後又 re-render
+
+useContext : 可以透過這個 function 直接將上層的 function 直接傳到底下好幾層的 component
+
+proptypes 可以設定來確定 prop 時要傳的參數型態
+
+React router 可以藉由給予不同路徑來 render 不同的 component 進來
+
+JWT : 實作登入機制會需要用到，當使用者發出請求時可以使用
+
+Redux 狀態管理套件
 
 ---
 
@@ -29,7 +42,7 @@ useLayoutEffect：render 前你想做什麼(可以先 import from react)
 
 可以等都大概看完後再回來看 fetch 的介紹跟第十四週後面的系統架構
 
-https://lidemy.com/courses/1181039/lectures/25643186
+https://lidemy.com/courses/390628/lectures/27118109
 
 可以在 terminal 使用 vimtuber
 
